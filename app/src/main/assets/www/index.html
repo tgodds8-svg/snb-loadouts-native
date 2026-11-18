@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#070d16">
+  <title>SnB Loadouts — Skull &amp; Bones Build Architect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Compact Sticky Command Bar -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-title">
+        <div class="crest-badge" aria-hidden="true">⚓</div>
+        <div>
+          <h1>SnB Loadouts</h1>
+          <p class="subtitle" id="header-ship-sub">Select a hull to begin</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button type="button" id="btn-scan-trigger" class="btn-scan" title="Scan loadout from camera or photo">
+          📷 <span>Scan</span>
+        </button>
+        <input type="file" id="scan-file-input" accept="image/*" capture="environment" hidden>
+      </div>
+    </div>
+
+    <!-- Live Telemetry Strip -->
+    <div class="telemetry-strip" id="telemetry-strip">
+      <div class="t-metric">
+        <span class="t-lbl">Sustained DPS</span>
+        <span class="t-val t-dps" id="pill-dps">0</span>
+      </div>
+      <div class="t-sep"></div>
+      <div class="t-metric">
+        <span class="t-lbl">Broadside Alpha</span>
+        <span class="t-val t-alpha" id="pill-alpha">0</span>
+      </div>
+      <div class="t-sep"></div>
+      <div class="t-metric">
+        <span class="t-lbl">Armor</span>
+        <span class="t-val t-armor" id="pill-armor">—</span>
+      </div>
+      <div class="t-sep" id="pill-tree-sep" hidden></div>
+      <div class="t-metric" id="pill-tree-box" hidden>
+        <span class="t-lbl">Tree</span>
+        <span class="t-val t-tree" id="pill-tree">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== TAB 1: BUILD ==================== -->
+    <section id="tab-build" class="tab-panel active">
+
+      <!-- Onboarding Banner (Dismissible) -->
+      <div class="onboard" id="onboard-card" hidden>
+        <div class="onboard-head">
+          <h2>Rapid Mobile Architect</h2>
+          <button type="button" class="btn-mini" id="onboard-dismiss">Dismiss</button>
+        </div>
+        <p class="hint">Switch views instantly with the pills below, tap <strong>📷 Scan</strong> to capture your screen loadout, or star favorite gear in any picker.</p>
+      </div>
+
+      <!-- Mobile Sub-Tab Pills (Zero Wall-of-Text Scroll) -->
+      <nav class="sub-pills" id="build-subpills" role="tablist">
+        <button type="button" class="spill active" data-sub="deck">⚔️ Deck <span class="badge-ct" id="ct-guns">0/0</span></button>
+        <button type="button" class="spill" data-sub="furniture">🪑 Furniture <span class="badge-ct" id="ct-furn">0/0</span></button>
+        <button type="button" class="spill" data-sub="hull">⛵ Hull</button>
+        <button type="button" class="spill" data-sub="blueprints">📜 Blueprints</button>
+      </nav>
+
+      <!-- SUB-VIEW A: DECK (Weapons + Armor + Telemetry Breakdown) -->
+      <div id="sub-deck" class="sub-view active">
+        <div id="build-no-ship" class="empty-state">
+          <p>No warship selected yet.</p>
+          <button type="button" class="btn btn-primary" id="btn-goto-hull">Choose a Warship →</button>
+        </div>
+
+        <div id="deck-workspace" hidden>
+          <!-- Rapid Swap Action Bar -->
+          <div class="quick-bar">
+            <button type="button" class="btn" id="btn-mirror-broadsides">⇄ Mirror Broadsides</button>
+            <button type="button" class="btn" id="btn-fill-all-slots">⚡ Fill Compatible</button>
+            <button type="button" class="btn" id="btn-share-build">⎘ Share</button>
+            <button type="button" class="btn" id="btn-import-build">⎗ Import</button>
+          </div>
+
+          <!-- Hull Armor Slot -->
+          <div id="armor-slot-box"></div>
+
+          <!-- Weapon Slots -->
+          <div id="weapon-slots"></div>
+
+          <!-- Per-Slot DPS Breakdown -->
+          <div class="card-panel" id="qdps-card">
+            <div class="panel-hdr">
+              <h3>Telemetry Breakdown</h3>
+              <span class="hint">Tap slot to swap or tune</span>
+            </div>
+            <div id="qdps-empty" class="hint">Equip at least one weapon to view live per-slot DPS.</div>
+            <div id="qdps-main" hidden>
+              <div id="qdps-breakdown"></div>
+              <p class="honesty">Armor mitigation curves are unpublished by Ubisoft — treat absolute DPS as an estimate and use <strong>Compare</strong> in the Tune tab for armor-independent rankings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW B: FURNITURE -->
+      <div id="sub-furniture" class="sub-view">
+        <div id="furn-no-ship" class="empty-state">
+          <p>Select a warship first to configure furniture slots.</p>
+          <button type="button" class="btn btn-primary" id="btn-goto-hull-2">Choose a Warship →</button>
+        </div>
+        <div id="furn-workspace" hidden>
+          <div class="furniture-controls">
+            <label>Minor Furniture Slots:
+              <input type="number" id="minor-slot-count" min="0" max="8" value="4">
+            </label>
+          </div>
+          <div id="furniture-slots"></div>
+        </div>
+      </div>
+
+      <!-- SUB-VIEW C: HULL SELECTION -->
+      <div id="sub-hull" class="sub-view">
+        <div class="search-row">
+          <input type="search" id="ship-search" placeholder="Search warships…">
+          <select id="ship-class-filter">
+            <option value="">All Classes</option>
+          </select>
+        </div>
+        <div class="card-grid" id="ship-list"></div>
+      </div>
+
+      <!-- SUB-VIEW D: ARCHETYPE BLUEPRINTS -->
+      <div id="sub-blueprints" class="sub-view">
+        <p class="hint" style="margin-top:0">Tap any blueprint to load a complete warship, armor, weapons, and furniture setup.</p>
+        <div class="card-grid" id="template-list"></div>
+      </div>
+
+    </section>
+
+    <!-- ==================== TAB 2: OPTIMIZE ==================== -->
+    <section id="tab-optimize" class="tab-panel">
+      <h2>🎯 Tactical Optimizer <span class="hint">Scenario-driven</span></h2>
+      <div class="opt-grid">
+        <label>Warship
+          <select id="opt-ship"></select>
+        </label>
+        <label>Target Profile
+          <select id="opt-enemy"></select>
+        </label>
+        <label>Combat Objective
+          <select id="opt-objective"></select>
+        </label>
+        <label>Engagement Range (m)
+          <input type="number" id="opt-range" min="50" max="1000" step="25" value="300">
+        </label>
+      </div>
+
+      <div class="opt-mastery">
+        <span>Mastery:</span>
+        <label><input type="checkbox" id="opt-m-relentless"> Relentless Force</label>
+        <label><input type="checkbox" id="opt-m-weakness"> Weakness Finder</label>
+        <label><input type="checkbox" id="opt-m-firepower"> Firepower Order</label>
+      </div>
+
+      <label class="opt-check">
+        <input type="checkbox" id="opt-estimated"> Include community-estimated (unverified) weapons
+      </label>
+
+      <button type="button" class="btn btn-primary" id="btn-optimize" style="width:100%;margin-bottom:1rem">
+        Calculate Best Loadouts
+      </button>
+
+      <div id="opt-results"></div>
+
+      <h2>Curated Fleet Presets</h2>
+      <div id="opt-presets"></div>
+    </section>
+
+    <!-- ==================== TAB 3: MASTERY TREE ==================== -->
+    <section id="tab-tree" class="tab-panel">
+      <h2>🌳 Y3S2 Mastery Tree <span class="hint" id="tree-count">0 / 80 preset · / 90 max</span></h2>
+
+      <div class="tree-controls">
+        <button type="button" class="btn btn-primary" id="btn-tree-optimum">Load Optimum (80)</button>
+        <button type="button" class="btn" id="btn-tree-clear">Clear</button>
+        <label class="opt-check" style="margin:0">
+          <input type="checkbox" id="tree-sync-dps" checked> Sync nodes to DPS Calculator
+        </label>
+      </div>
+
+      <div class="tree-toolbar">
+        <input type="search" id="tree-search" placeholder="Search tree nodes…">
+        <button type="button" class="btn" id="btn-tree-zoom-in">+</button>
+        <button type="button" class="btn" id="btn-tree-zoom-out">−</button>
+        <button type="button" class="btn" id="btn-tree-zoom-reset">Reset</button>
+      </div>
+
+      <div id="tree-error" class="notice" hidden>Unable to load mastery tree data.</div>
+
+      <div class="tree-wrap">
+        <svg id="tree-svg" viewBox="0 0 1000 1000"></svg>
+      </div>
+
+      <h3>Milestone Spine Picks (1 per Tier)</h3>
+      <div class="opt-grid" style="grid-template-columns:1fr 1fr 1fr">
+        <label>Tier 10 <select id="center-10"></select></label>
+        <label>Tier 30 <select id="center-30"></select></label>
+        <label>Tier 50 <select id="center-50"></select></label>
+      </div>
+      <div id="tree-center"></div>
+      <div id="tree-unstoppable-note" class="notice small" hidden>
+        Unstoppable Force trades raw weapon damage for crowd-control resilience.
+      </div>
+
+      <h3>Node Stat Totals</h3>
+      <div id="tree-math"></div>
+
+      <h3>Selected Nodes</h3>
+      <div id="tree-selected-list"></div>
+    </section>
+
+    <!-- ==================== TAB 4: TUNE & CODEX ==================== -->
+    <section id="tab-tune" class="tab-panel">
+      <h2>Saved Loadouts &amp; Sharing</h2>
+      <div id="adv-no-loadout" class="notice">Select a warship in the <strong>Build</strong> tab to save or share loadouts.</div>
+      <div id="adv-loadout" hidden>
+        <div class="loadout-header">
+          <input type="text" id="loadout-name" placeholder="Loadout name…">
+          <div class="loadout-actions">
+            <button type="button" class="btn btn-primary" id="btn-save-loadout">Save</button>
+            <button type="button" class="btn" id="btn-load-loadout">Saved…</button>
+            <button type="button" class="btn" id="btn-export-loadout">Export</button>
+            <button type="button" class="btn" id="btn-import-loadout">Import</button>
+          </div>
+        </div>
+        <div id="saved-list" class="saved-list" hidden></div>
+      </div>
+
+      <h2>Compare Loadouts</h2>
+      <div class="compare-row">
+        <select id="compare-a"></select>
+        <span class="vs">vs</span>
+        <select id="compare-b"></select>
+        <button type="button" class="btn btn-primary" id="btn-compare">Compare</button>
+      </div>
+      <div id="compare-result"></div>
+
+      <h2>Seasonal Perks <span class="hint" id="season-dates"></span></h2>
+      <div id="buff-list"></div>
+
+      <h2>Mastery Perks <span class="hint">Points: <strong id="mastery-used">0</strong> / 90</span></h2>
+      <div class="mastery-bar">
+        <div class="points-bar"><div id="mastery-fill"></div></div>
+      </div>
+      <div id="mastery-list"></div>
+
+      <h2>Stacking Rules</h2>
+      <div id="stacking-toggles" class="stacking-grid"></div>
+
+      <h2>Combat Assumptions</h2>
+      <div class="assumptions">
+        <label>Engagement Range (m)
+          <input type="number" id="assume-range" min="50" max="1000" step="25" value="300">
+        </label>
+        <label>Weakpoint Hit Rate (%)
+          <input type="number" id="assume-weakpoint" min="0" max="100" step="5" value="20">
+        </label>
+        <label>Weakpoint Damage Bonus (%)
+          <input type="number" id="assume-weakpoint-bonus" min="0" max="300" step="5" value="50">
+        </label>
+      </div>
+
+      <h2>Codex Reference <span class="hint" id="data-verified-line"></span></h2>
+      <h3>Status Effects</h3>
+      <div id="status-ref-table" class="ref-table"></div>
+
+      <h3>Ships Codex</h3>
+      <input type="search" id="ref-ship-search" placeholder="Filter ships…">
+      <div id="ref-ship-table" class="ref-table"></div>
+
+      <h3>Weapons Codex</h3>
+      <input type="search" id="ref-weapon-search" placeholder="Filter weapons…">
+      <div id="ref-weapon-table" class="ref-table"></div>
+
+      <h3>Armor Codex</h3>
+      <input type="search" id="ref-armor-search" placeholder="Filter armor…">
+      <div id="ref-armor-table" class="ref-table"></div>
+
+      <footer class="app-foot">
+        SnB Loadouts · Community Edition · Unofficial fan tool for Skull &amp; Bones™. Game data &amp; trademarks belong to Ubisoft Entertainment.
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Sticky Bottom Navigation -->
+  <nav class="bottomnav" role="tablist">
+    <button type="button" class="btab active" data-tab="build" aria-selected="true">
+      <span class="btab-ico">⚒</span><span>Build</span>
+    </button>
+    <button type="button" class="btab" data-tab="optimize" aria-selected="false">
+      <span class="btab-ico">🎯</span><span>Optimize</span>
+    </button>
+    <button type="button" class="btab" data-tab="tree" aria-selected="false">
+      <span class="btab-ico">🌳</span><span>Tree</span>
+    </button>
+    <button type="button" class="btab" data-tab="tune" aria-selected="false">
+      <span class="btab-ico">⚙</span><span>Tune</span>
+    </button>
+  </nav>
+
+  <!-- Thumb-Zone Rapid-Swap Item Picker Modal -->
+  <div id="picker-modal" class="modal" hidden>
+    <div class="modal-sheet">
+      <div class="drag-handle"></div>
+      <div class="modal-head">
+        <input type="search" id="picker-search" placeholder="Search items…">
+        <button type="button" class="btn" id="picker-close">✕</button>
+      </div>
+
+      <!-- Horizontal Filter Chips -->
+      <div class="filter-strip" id="picker-filters"></div>
+
+      <div class="picker-actions" id="picker-clear-row">
+        <button type="button" class="btn btn-danger btn-sm" id="picker-clear">Clear Slot</button>
+        <label class="batch-check" id="picker-apply-all-wrap" hidden>
+          <input type="checkbox" id="picker-apply-all"> Equip to all matching slots
+        </label>
+      </div>
+
+      <div id="picker-list" class="picker-list"></div>
+    </div>
+  </div>
+
+  <!-- Weapon / Furniture Detail Tuning Modal -->
+  <div id="weapon-modal" class="modal" hidden>
+    <div class="modal-sheet">
+      <div class="drag-handle"></div>
+      <div class="modal-head">
+        <h3 id="weapon-modal-title">Configure</h3>
+        <button type="button" class="btn" id="weapon-close">✕</button>
+      </div>
+      <div id="weapon-modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Camera Screen Scanner Review Modal -->
+  <div id="scanner-modal" class="modal" hidden>
+    <div class="modal-sheet">
+      <div class="drag-handle"></div>
+      <div class="modal-head">
+        <h3>📷 Screen Loadout Scanner</h3>
+        <button type="button" class="btn" id="scanner-close">✕</button>
+      </div>
+      <div id="scanner-body" class="modal-body">
+        <div id="scanner-status" class="notice">
+          Take a clear photo of your Skull &amp; Bones loadout screen (or select a screenshot).
+        </div>
+        <div class="scanner-preview-wrap" id="scanner-preview-wrap" hidden>
+          <img id="scanner-preview-img" alt="Captured loadout preview">
+        </div>
+        <div id="scanner-progress" hidden>
+          <div class="points-bar"><div id="scanner-bar-fill"></div></div>
+          <p class="hint" id="scanner-progress-text" style="text-align:center;margin:.4rem 0">Scanning screen text…</p>
+        </div>
+        <div id="scanner-results"></div>
+        <div class="scanner-footer">
+          <button type="button" class="btn" id="scanner-retake">📷 Retake / Upload</button>
+          <button type="button" class="btn btn-primary" id="scanner-apply" hidden>Apply to Loadout →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (Preserve Load Order) -->
+  <script src="js/data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/archetypes.js"></script>
+  <script src="js/optimizer.js"></script>
+  <script src="js/tree.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/scanner.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

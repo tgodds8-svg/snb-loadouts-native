@@ -1,0 +1,2395 @@
+{
+  "game": "Skull and Bones (Ubisoft)",
+  "last_verified": "2026-10-21",
+  "notes": "GAPS AND CAVEATS. (1) Reload times for torpedoes, sea fire, mortars, rockets and springloaders could not be verified from any source \u2014 recorded as null with estimated:true. (2) Base damage for most named/epic seasonal weapons (Faule Ilse, The Warhammer, Endless Requiem, La Piq\u00fbre, Divine Thunder, Le Fl\u00e9au, Crouching Tiger, Phoenix Talons, Heaven's Mandate, Bane of the Ten Suns, White Jade, Agni's Fury, Heavenly Thunder, Virulent Accord, Cloudbinder, Stormtongue, Brightmaw, Reachwarden, Celestial Bloom, Woundcaller, Roaring Meg, Infernal Moss, Nashkar, Vogel Greif) is estimated from same-class equivalents or left null \u2014 flagged estimated:true. (3) Year 2 ascension (Basic/Advanced/Mythic tiers, weapon mods) scales damage beyond listed max-craft-tier values and adds rolled mods; listed numbers are pre-ascension max crafted tier. E.g. Thunder Dragon Cannon seen at 2014/2755/3146 base damage across sources depending on ascension and buffs. (4) 'Wicked Wail' (mentioned in task brief) produced zero search hits anywhere \u2014 likely does not exist; not included. 'Phoenix Pyre' and 'Ash Breaker' are named in community build guides but no stats found \u2014 listed in gaps, Ash Breaker omitted pending confirmation. (5) Vogel Greif appears on the Fandom weapon taxonomy and in tier lists (S-tier demi-cannon) but no stats were published \u2014 included with estimated:true. (6) Repair weapons list repair amounts where known; Repair Mortar I-III repair values unverified. (7) Projectile speeds are not published by Ubisoft; all null. (8) Infernal Maw buoy stats (3930 total damage, 65m range, 25s operation, 500 buoy health) and ascension tiers come from gameplay ground truth provided with this task, cross-checked against Y1S2 patch notes (300% eruption damage, Smuggler Pass source). (9) Y3 SUPPLEMENTARY PASS (2026-10-02): added 12 new weapons from Year 3 Season 1 'Shattered Seas' (May 2026) and Year 3 Season 2 'Crimson Waters' (Aug 2026) \u2014 Hullcarver, De Breker, L'Aiguille, Blightbearer, Soulsnatcher, Atma's Toll (Y3S1); Scorch Song, Drowning Hellion, Hellfire, Claws of the Deep, Drakon's Jaws, Anathema (Y3S2). Perk text is quoted from the official Ubisoft Y3S1/Y3S2 patch notes. Base damage numbers for all named Y3 weapons are unpublished \u2014 damage_per_shot is null and reload/range are inherited from the family class, all marked estimated:true. Hullcarver's Pulverize perk was cross-verified against a community Galleon build guide. Ascended variants (e.g. Siege Dardannelles, Piercing l'Aiguille, Burning Alecto) and Adept-modded weapons are re-ascensions of existing weapons, not new weapons, and are not listed separately. (10) Pre-Y3 gap noticed during this pass: the 'Blightkeeper Springloader' appears in the official Y2S1.1 patch notes but is not in this file \u2014 left for a separate pass since it predates Y3.",
+  "season_context": "Year 3 Season 2 'Crimson Waters' (launched 18 Aug 2026) is the latest released season as of this writing.",
+  "sources": [
+    "https://game8.co/games/Skull-and-Bones/archives/443250",
+    "http://game8.co/games/Skull-and-Bones/archives/444523",
+    "http://game8.co/games/Skull-and-Bones/archives/444081",
+    "https://game8.co/games/Skull-and-Bones/archives/445065",
+    "https://game8.co/games/Skull-and-Bones/archives/445054",
+    "https://GameRant.com/skull-and-bones-best-weapons-get-first-blueprints/",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2CFEWvtQ3dYOKjMGO7Trnl/y2s2-patch-notes",
+    "https://www.ubisoft.com/en-gb/game/skull-and-bones/news-updates/Yfnv84AkcMhgXbPlAXdMa",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/3wJTkZubG55fhncijrWGtA/y2s3-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/5oojUG3ZZTZJiIooM7FxC8",
+    "https://mp1st.com/title-updates-and-patches/skull-and-bones-update-1-000-014-hits-the-seas-for-season-3-this-aug-22-full-patch-notes-listed",
+    "https://news.ubisoft.com/en-gb/article/1r70KgZtUkbbl22aPup39j/skull-and-bones-season-3-into-the-dragons-wake-out-now",
+    "https://updatecrazy.com/skull-and-bones-update-1-000-028-patch-notes-y2s1/",
+    "https://www.mmoah.com/news/skull-and-bones-is-this-mortar-weapon-worth-trying-le-fl%C3%A9au",
+    "https://skullandbones.fandom.com/wiki/Weapons",
+    "https://www.omaada.com/blogs/337050/MMOexp-Skull-and-Bones-Thunder-Dragon-Cannon-Explained-The-Core",
+    "https://www.thefpsreview.com/2024/08/22/skull-and-bones-arrives-on-steam-with-free-new-season-3-content-into-the-dragons-wake/",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/7fVVY1bpHbvXCP8sUw64aP/y3s1-patch-notes",
+    "https://www.ubisoft.com/en-us/game/skull-and-bones/news-updates/2aVFScvAB18TIE5BY4VDSW/y3s2-patch-notes",
+    "https://www.runescape4guide.com/2026/07/21/skull-and-bones-galleon-hullcarver-build-guide/",
+    "https://bleedingcool.com/games/skull-and-bones-reveals-roadmap-for-year-3-sails-of-power/"
+  ],
+  "status_effect_reference": {
+    "Ablaze": "Triggered by sufficient fire/burning damage. High damage over time.",
+    "Flooded": "Triggered by sufficient flooding damage. Medium DoT (half irreparable via repair kits); slows the ship.",
+    "Poisoned": "Triggered by sufficient toxic damage (Y2S3). ~175-230 base damage/sec vs players (scales with target max HP); -50% brace mitigation; bracing costs 60% more crew stamina.",
+    "Shell-shocked": "Disables the ship's weapons (Y2S1.1: 3.3s duration, up from 5s; +20% buildup threshold on players; diminishing returns enabled). Triggers a one-off 3000 damage AoE.",
+    "Stormstruck": "Triggered by sufficient electric damage. Electric status; synergizes with lightning-strike perks.",
+    "Taunted": "Provoke-family status; increases weakpoint damage taken (50% on Battle Junk). Unlucky Taunt: 250 damage/sec, stacks to 5.",
+    "Torn Sails": "Triggered by sail (tearing) damage. Immobilizes/slows the ship (Y2S1.1: -75% sailing speed).",
+    "Punctured": "Y3S1 status effect. L'Aiguille's Splinter has a 30% chance to instantly Puncture targets in its area of operation; Punctured targets lose 2% Armor Rating per second (up to 14%) within the area. Hullcarver's Pulverize scales to +18% weapon damage against Punctured targets. Ramming with Royal Ramming Works instantly applies 50% Punctured; Needle Shield armor gains Armor Rating and Piercing damage from Bracing hits on Punctured targets."
+  },
+  "weapons": [
+    {
+      "damage_per_shot": 1125,
+      "damage_types": {
+        "basic": 1125
+      },
+      "estimated": false,
+      "family": "Culverin",
+      "name": "Culverin V",
+      "notes": "Damage/range cross-verified Game8 infamy table + gamerant (Culverin II 625/6.00s/600m on both). Tier progression I-V: 500/625/750/1000/1125.",
+      "perks": [
+        "No innate perks (base variant)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": 936,
+      "damage_types": {
+        "basic": 936
+      },
+      "estimated": false,
+      "family": "Tearing Culverin",
+      "name": "Tearing Culverin III",
+      "notes": "Damage from Game8 (552/744/936 across tiers I-III). Reload/range inherited from culverin family.",
+      "perks": [
+        "Tearing II: increased damage to sails, builds Torn Sails status"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "Tearing II \u2014 increased sail damage / Torn Sails charge rate (exact numbers unverified)",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "culverin"
+    },
+    {
+      "damage_per_shot": 1025,
+      "damage_types": {
+        "basic": 1025,
+        "piercing": 205
+      },
+      "estimated": false,
+      "family": "Basilisk",
+      "name": "Basilisk III",
+      "notes": "Damage 625/825/1025 across tiers (Game8). Screenshot 2026-10-10: GS 133, Piercing II (+75% weakpoint), Adept Shock 17.7% electric, Adept Raider 55% vulnerable build-up, ascension 2/4, Lifebound.",
+      "perks": [
+        "Piercing II: adds 20% of damage as Piercing damage; +75% damage to weakpoints (card-verified 2026-10-10)",
+        "Adept Shock (ascension mod): adds 17.7% damage as Electric damage (card-verified 2026-10-10)",
+        "Adept Raider (ascension mod): +55% Vulnerable status build-up (card-verified 2026-10-10)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin",
+      "gear_score": 133,
+      "ascension": "2/4 (card-verified 2026-10-10)"
+    },
+    {
+      "damage_per_shot": 1480,
+      "damage_types": {
+        "electric": 828,
+        "explosive": 148
+      },
+      "estimated": false,
+      "family": "Stormtongue",
+      "name": "Stormtongue",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (177 gear score, full perk tree incl. Special + Mythic). Damage Per Shot 1480, Total Damage 2457, Electric 828, Explosive 148. Reload 6.9s read from card (69 displayed, interpreted as 6.9s). 500m range. Uses Cannonballs ammo.",
+      "perks": [
+        "Adds 30% of damage as Electric Damage.",
+        "Adds 10% of damage as Explosive Damage.",
+        "[Basic] Adds 19.0% damage as Electric Damage.",
+        "[Advanced] 17.4% of base damage builds up the Taunted status effect on targets.",
+        "[Special] Hits that land at 70% of Maximum Range or further also deals 54.8% more damage.",
+        "[Mythic] Adds 7% damage as Electric Damage. Every hit on a target increases the chance to apply the Stormstruck status effect by 2%, up to a maximum of 40%. This resets after 10 seconds of not hitting any targets."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 6.9,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Taunted",
+        "Stormstruck"
+      ],
+      "type": "culverin",
+      "rarity": "rare"
+    },
+    {
+      "damage_per_shot": 1345,
+      "damage_types": {
+        "burning": 269
+      },
+      "estimated": false,
+      "family": "Culverin",
+      "name": "Burning Culverin III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (78 gear score, blueprint view; in-game name shows as 'Fire Culverin III'). Damage Per Shot 1345, Total 1614. Uses Cannonballs.",
+      "perks": [
+        "A versatile cannon that offers good range, damage, and Reload Time. Its incendiary shots set targets ablaze."
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "culverin",
+      "rarity": "rare",
+      "fire_rate_s": 0.15,
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 210,
+      "projectiles": 1,
+      "gun_ports": 4
+    },
+    {
+      "damage_per_shot": 1188,
+      "damage_types": {
+        "basic": 1188
+      },
+      "estimated": false,
+      "family": "Demi-cannon",
+      "name": "Demi-cannon V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Demi-cannon II 660/3.50s/250m on both). Tier progression I-V: 528/660/792/1056/1188.",
+      "perks": [
+        "No innate perks (base variant)",
+        "150% weakpoint damage (community-reported, unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1028,
+      "damage_types": {
+        "basic": 1028,
+        "flooding": 51
+      },
+      "estimated": false,
+      "family": "Flooding Demi-cannon",
+      "name": "Flooding Demi-cannon III",
+      "notes": "Damage 604/816/1028 across tiers (Game8). Reload/range from demi-cannon family.",
+      "perks": [
+        "Flooding II: adds 5% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "Flooding II \u2014 +5% flooding damage, builds Flooded (exact charge unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1292,
+      "damage_types": {
+        "basic": 1292,
+        "fire": 64
+      },
+      "estimated": false,
+      "family": "Zamzama",
+      "name": "Zamzama III",
+      "notes": "Damage 788/1040/1292 across tiers (Game8). Ascended/community builds report up to ~2254 with buffs \u2014 ascension scales beyond this.",
+      "perks": [
+        "Raider: increased weakpoint damage (exact value unverified)",
+        "Burning II: adds 5% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "demi-cannon"
+    },
+    {
+      "damage_per_shot": 1362,
+      "damage_types": {
+        "basic": 1362,
+        "piercing": 272
+      },
+      "estimated": false,
+      "family": "Piercing Demi-cannon",
+      "name": "Piercing Demi-cannon III",
+      "notes": "Screenshot-verified 2026-10-10 from Luke's equipped card (GS 102, ascended 3/4 standard): Total 1634, Per Shot 1362, piercing 272/shot (20% of 1362), 4 projectiles, reload 3.50s, range 250m, weakpoint 306%, projectile speed 400 m/s, All Deck. Supersedes 2026-10-09 blueprint view (GS 78, 1184/1421 unascended).",
+      "perks": [
+        "Applies Punctured (weakens armor). Perks section cut off on screenshot \u2014 resend scrolled down if you want them filed."
+      ],
+      "projectile_speed": "400 m/s",
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Punctured"
+      ],
+      "type": "demi-cannon",
+      "fire_rate_s": 3.5,
+      "rarity": "rare",
+      "weakpoint_damage_pct": 306,
+      "projectile_speed_ms": 400,
+      "projectiles": 4,
+      "gun_ports": 4,
+      "total_damage": 1634,
+      "gear_score": 102,
+      "ascension": "3/4 standard (diamonds) (card-verified 2026-10-10)"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "explosive": "Combustion II"
+      },
+      "estimated": true,
+      "family": "Explosive Demi-cannon",
+      "name": "Explosive Demi-cannon III",
+      "notes": "Uncommon weapon added Y2S1 (tiers I-III). Base damage unpublished; family stats inherited (estimated). Slot 'bow/broadside/stern' verified 2026-10-13: matches all 1 verified demi-cannon pattern(s).",
+      "perks": [
+        "Combustion II: adds explosive secondary damage (exact % unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 1569,
+      "damage_types": {
+        "piercing": 470
+      },
+      "estimated": false,
+      "family": "Demi-cannon",
+      "name": "Faule Ilse",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's two cards (135 + 98 GS). Demi-cannon, 500m, Cannonballs. Roll A is the weakpoint engine (+100% weakpoint); Roll B carries burning.",
+      "perks": [
+        "Hits that land on a ship's hull or structure ricochet towards a nearby target, dealing 75% of the original damage",
+        "Adds 30% of damage as Piercing Damage. Increases damage to weakpoints by 100%",
+        "Roll A (135 GS, ascended 3/4): [Basic] +11.1% damage; [Advanced] destroying a target restores 1890 Brace Strength; [Advanced] 3.31% chance per hit to reduce a repair kit cooldown by 3s. Total 2039, per-shot 1569.",
+        "Roll B (98 GS): [Basic] +10.2% burning damage. Total 1831, per-shot 1306."
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon",
+      "rarity": "epic",
+      "fire_rate_s": 3.5,
+      "weakpoint_damage_pct": 250,
+      "projectile_speed_ms": 400,
+      "projectiles": 4,
+      "gun_ports": 4,
+      "verified_from_gameplay": true
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": true,
+      "family": "Vogel Greif",
+      "name": "Vogel Greif",
+      "notes": "Listed on Fandom weapon taxonomy under Demi-Cannon (Special) and S-tier in community tier lists. No stats published anywhere found. Slot 'bow/broadside/stern' verified 2026-10-13: matches all 1 verified demi-cannon pattern(s).",
+      "perks": [
+        "Unverified \u2014 listed as special/epic demi-cannon, rated S-tier by community tier lists"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "demi-cannon",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 1518,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Phoenix Talons",
+      "name": "Phoenix Talons",
+      "notes": "Epic demi-cannon, Li Tian Ning reward. 1518/shot, 4.4s reload, 150% weakpoint from user's 119-score card 2026-10-04. 18 hits/volley per official PTS guide. 2026-10-18: Luke holds 160x2 (or 3), 139 (ROAR taunt), 119. The 139 is the direct-taunt roll.",
+      "perks": [
+        "Eighteen Strikes: 18 hits per volley, 1888 burning instantly (official Season 3 PTS)",
+        "200% damage vs Ablaze targets",
+        "Provoking: builds Taunt",
+        "Roll C (160 GS, 2026-10-18): SPARKS (+60 electric/hit), TEARING (+38% sails), BRUTE (4% chance restore 400 brace), ENDURING EMBERS (21% as burning over 10s).",
+        "Roll D (160 GS, 2026-10-18): SHARPENED (+11.9% piercing), GRACE OF THE WINDS (2.1% chance +10% turn speed 15s, stacks 3), ENERGIZE (4% chance restore 6.6% crew stamina), FLASH FLOOD (15% Flooded on weakpoint hit).",
+        "Roll E (139 GS, 2026-10-18): RAPID RELOAD (-10.1% reload), VICTOR'S RALLY (1860 brace on kill), ROAR (7.7% of base damage builds Taunted), WILDFIRE (255% burning when Ablaze applied, 300m radius). *** BROADSIDE-2 PICK for Garuda loop 2026-10-18 \u2014 the ROAR taunt roll. ***",
+        "Roll F (119 GS, 2026-10-18): DIRE BURNING (ignore 14.2% burning resistance), RAIDER (+36% vulnerable buildup), SEVERITY (12% chance +103% severe damage). Lifebound."
+      ],
+      "projectile_speed": 400,
+      "range_m": 250,
+      "reload_time_s": 4.4,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "effect": "Burning",
+          "application": "1888 burning per volley (official)",
+          "estimated": false
+        },
+        {
+          "effect": "Taunted",
+          "application": "Provoking perk",
+          "estimated": false
+        }
+      ],
+      "type": "demi-cannon",
+      "weakpoint_mult": 1.5,
+      "player_rolls": [
+        {
+          "gear_score": 160,
+          "total_damage": 1822,
+          "damage_per_shot": 1518,
+          "reload_time_s": 82,
+          "damage_types": {
+            "burning": 303
+          },
+          "perks": [
+            "Landing 18 hits in a single volley will instantly deal 1888 Burning Damage. This effect deals 200% as much damage on a target with the Ablaze status effect.",
+            "Hits on a target cause build up of the Taunted status effect",
+            "Adds 20% of damage as Burning Damage",
+            "[Basic] Every hit deals an extra burst of 60 Electric Damage.",
+            "[Advanced] Increases damage by 38% when hitting sails",
+            "[Advanced] Hits have a 4% chance to restore 400 Brace Strength to this ship.",
+            "[Mythic] Every hit deals 21% as Burning Damage over 10s"
+          ],
+          "notes": "Screenshot-verified 2026-10-19 from Luke's card. Broadside on his Junk 'Relentless'."
+        },
+        {
+          "gear_score": 160,
+          "total_damage": null,
+          "damage_per_shot": null,
+          "reload_time_s": 55,
+          "damage_types": {
+            "burning": 303,
+            "piercing": 180
+          },
+          "perks": [
+            "Landing 18 hits in a single volley will instantly deal 1888 Burning Damage. This effect deals 200% as much damage on a target with the Ablaze status effect.",
+            "Hits on a target cause build up of the Taunted status effect",
+            "Adds 20% of damage as Burning Damage",
+            "[Basic] Adds 11.9% damage as Piercing Damage",
+            "[Advanced] Hits have a 2.1% chance to increase turn speed by 10% for 15 seconds. Effect can be stacked up to 3 times.",
+            "[Advanced] Hits have a 4% chance to restore 6.6% Crew Stamina to this ship.",
+            "[Mythic] 15% chance to trigger the Flooded status effect when hitting a weakpoint on a target (rest of card cut off in screenshot)"
+          ],
+          "notes": "Screenshot-verified 2026-10-19 from Luke's card. Broadside on his Junk 'Relentless'. Distinct from the 139 ROAR roll on the Garuda."
+        }
+      ]
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "toxic": "Toxic III"
+      },
+      "estimated": true,
+      "family": "Brightmaw",
+      "name": "Brightmaw",
+      "notes": "Epic poison demi-cannon added Y2S4 (Nian event). Base damage unpublished (estimated:true). Note: its Toxic III wording differs from Virulent Accord's Toxic III \u2014 quoted verbatim. Slot 'bow/broadside/stern' verified 2026-10-13: matches all 1 verified demi-cannon pattern(s).",
+      "perks": [
+        "Caustic Ammo: landing 15 hits in a single volley on a target increases weapon damage the target receives by 8% for 10s; 12% more damage from all sources if target is Poisoned",
+        "Toxic III: hits sap Crew Stamina; adds 20% damage that cannot be blocked by Bracing"
+      ],
+      "projectile_speed": null,
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "application": "via toxic damage (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "demi-cannon",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 1536,
+      "damage_types": {
+        "electric": 307,
+        "piercing": 172
+      },
+      "estimated": false,
+      "family": "Thunder Dragon",
+      "name": "Thunder Dragon Cannon",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's own card (173 gear score, epic Demi-cannon). Total Damage 2123, Damage Per Shot 1536 (Electric 586). 500m range. Uses Cannonballs. On his Frigate electric/status build; mod-swapped 2026-10-18. CORRECTION 2026-11-10: Vulnerable build-up rerolled OFF by Luke \u2014 no longer on this weapon. Replacement mod unknown, do not invent.",
+      "perks": [
+        "Each volley of cannon fire on enemy sails has a chance of summoning a lightning strike that deals 5000 Electric Damage. Every 5 hits adds a 15% chance, up to a maximum of 45%. Lightning strike damage increases to 10000 if target has Torn Sails.",
+        "Increases damage by 75% when hitting sails",
+        "Adds 20% of damage as Electric Damage",
+        "[Basic] Adds 18.2% damage as Electric Damage",
+        "[Advanced] Destroying a weakpoint restores 221 Severe Damage to this ship",
+        "[Mythic] Deal additional 240% Electric Damage on a target when it triggers the Stormstruck status effect"
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 8.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Stormstruck",
+        "Torn Sails"
+      ],
+      "type": "demi-cannon",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 2452,
+      "damage_types": {
+        "basic": 2452,
+        "piercing": 245
+      },
+      "estimated": false,
+      "family": "Long Gun",
+      "name": "Long Gun V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Long Gun II 1362/9.00s/1000m on both). Tier progression I-V: 1090/1362/1635/2180/2452.",
+      "perks": [
+        "Piercing I: adds 10% of damage as Piercing damage",
+        "Precision: increased weakpoint damage (exact value unverified)"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2125,
+      "damage_types": {
+        "basic": 2125,
+        "fire": 212,
+        "piercing": 425
+      },
+      "estimated": false,
+      "family": "Fire Long Gun",
+      "name": "Fire Long Gun III",
+      "notes": "Damage 1253/1689/2125 across tiers (Game8). Reload/range from long gun family.",
+      "perks": [
+        "Piercing II: adds 20% of damage as Piercing damage",
+        "Burning I: adds 10% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {
+        "repair": 2730
+      },
+      "estimated": false,
+      "family": "Repair Long Gun",
+      "name": "Repair Long Gun III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (78 gear score, blueprint view). Repair 2730/shot. Support weapon \u2014 no damage. Uses Cannonballs.",
+      "perks": [
+        "Fires casings filled with an adhesive that repairs allied ships."
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun",
+      "fire_rate_s": 0.6,
+      "rarity": "rare",
+      "projectile_speed_ms": 350,
+      "projectiles": 1,
+      "gun_ports": 2
+    },
+    {
+      "damage_per_shot": 2234,
+      "damage_types": {
+        "basic": 2234,
+        "piercing": "unverified %"
+      },
+      "estimated": false,
+      "family": "Scurlock's Long Nines",
+      "name": "Scurlock's Long Nines",
+      "notes": "Damage 2234 and range 1000m from Game8 infamy table. Perks unpublished (estimated:true on perks). Reload from family.",
+      "perks": [
+        "Perks unpublished \u2014 estimated:false on damage/range only"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 2625,
+      "damage_types": {
+        "electric": 708,
+        "piercing": 524
+      },
+      "estimated": false,
+      "family": "Divine Thunder",
+      "name": "Divine Thunder",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own max-tier card (160 gear score, full mythic tree). Damage Per Shot 2625, Total Damage 3859. Reload 6.2s read from card (62 displayed, interpreted as 6.2s). Uses Cannonballs ammo.",
+      "perks": [
+        "Hits to a target's weakpoint have a 35% chance to summon a devastating Lightning strike that deals 3000 Electric Damage.",
+        "Adds 20% of damage as Electric Damage.",
+        "Adds 20% of damage as Piercing Damage. Increases damage to weakpoints by 75%.",
+        "[Basic] Increases damage by 11.2%.",
+        "[Advanced] Hits have a 13.31% chance to reduce any repair kit cooldown by 3 seconds.",
+        "[Advanced] 7.8% of base damage builds up the Taunted status effect on targets.",
+        "[Mythic] Adds 7% damage as Electric Damage. Every hit on a target increases the chance to apply the Stormstruck status effect by 2%, up to a maximum of 40%. Resets after 10 seconds of not hitting any targets.",
+        "Roll B (124 GS, ascended 2/4, 2026-10-18): [Basic] +18.3% toxic damage; [Advanced] 12.55% chance to reduce restoration kit cooldown by 3s. Total 3622, per-shot 2288 (457 electric/457 piercing/418 toxic). ELECTRIC \u2014 benched for the non-electric Garuda loop per 2026-10-18 directive."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 6.2,
+      "slot": "bow/stern",
+      "status_effects": [
+        "Taunted",
+        "Stormstruck"
+      ],
+      "type": "long gun",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 2234,
+      "damage_types": {
+        "basic": 2234,
+        "toxic": "yes (drains stamina)"
+      },
+      "estimated": true,
+      "family": "La Piq\u00fbre",
+      "name": "La Piq\u00fbre",
+      "notes": "Epic poison long gun added Y1S2 (La Peste's cronies). Described in Y1S2 patch notes: 'fires tainted shells that drain Crew Stamina; adds 20% damage that cannot be blocked'. Y2S1.1 reduced stamina drain from 15 to 7. Retroactively converted to Toxic damage type in Y2S3. Base damage unpublished \u2014 estimated from epic long gun class. Also spelled 'La Piqure'. Slot 'bow/stern' verified 2026-10-13: matches all 1 verified long gun pattern(s).",
+      "perks": [
+        "Toxic: tainted shells drain Crew Stamina (15 per hit, reduced to 7 in Y2S1.1; Y2S3: 1% of toxic damage drains stamina)",
+        "Adds 20% damage that cannot be blocked"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via toxic damage (charge rate unverified)",
+          "effect": "Poisoned"
+        }
+      ],
+      "type": "long gun",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 2583,
+      "damage_types": {
+        "flooding": 258,
+        "piercing": 258
+      },
+      "estimated": false,
+      "family": "Farscourge",
+      "name": "Farscourge III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (90 gear score, warehouse view). Damage Per Shot 2583, Total 3100. Uses Cannonballs. Detailed stats: 7.20s reload, 1000m range.",
+      "perks": [
+        "A weapon forged by dishonorable scallywags, striking from afar to leave hulls Punctured. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Punctured"
+      ],
+      "type": "long-gun",
+      "rarity": "rare",
+      "fire_rate_s": 0.6,
+      "weakpoint_damage_pct": 200,
+      "projectile_speed_ms": 350
+    },
+    {
+      "damage_per_shot": 2340,
+      "damage_types": {
+        "piercing": 234
+      },
+      "estimated": false,
+      "family": "Tearing Long Gun",
+      "name": "Tearing Long Gun III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (78 gear score, blueprint view). Damage Per Shot 2340, Total 2574. Uses Cannonballs.",
+      "perks": [
+        "Long-barrel cannons adept at destroying targets at long range. Great at tearing enemy sails."
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun",
+      "fire_rate_s": 0.6,
+      "rarity": "rare",
+      "weakpoint_damage_pct": 200,
+      "projectile_speed_ms": 350,
+      "projectiles": 1,
+      "gun_ports": 2
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {},
+      "estimated": false,
+      "family": "Reachwarden",
+      "name": "Reachwarden",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score). Support Long Gun \u2014 deals no damage, heals allies. 500m range.",
+      "perks": [
+        "Hits on allies apply a stack that restores 2% Hull Health over 2s, up to 10 stacks for 20% over 20s. For targets beyond 200m, 4 stacks are applied per hit. At maximum stacks, removes Torn Sails and prevents additional Torn Sails Charges for the duration.",
+        "Lesser restoration of a friendly ship's Hull Health (2460 base)."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "long gun",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 2739,
+      "damage_types": {
+        "basic": "unverified"
+      },
+      "estimated": false,
+      "family": "Nashkar",
+      "name": "Nashkar Long Gun",
+      "notes": "Stats/perks from user's in-game card 2026-10-04 (epic, 2739/shot, 4 diamonds, mythic-tier shown). Self-healing opener with burning application.",
+      "perks": [
+        "5% of damage dealt restores Hull Health; repair x700% on weakpoint hits",
+        "Adds 20% of damage as Burning Damage",
+        "Adds 10% of damage as Piercing Damage",
+        "Increases damage to weakpoints by 50%",
+        "[Basic] Hits ignore 13.2% of target's Burning resistance",
+        "[Advanced] Weakpoint Damage +37%",
+        "[Advanced] Existing Piercing Damage +33.1%",
+        "[Mythic] Every hit deals 39% as Burning Damage over 10s"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 9.0,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "effect": "Burning",
+          "application": "20% of damage as Burning + 39% mythic DoT over 10s",
+          "estimated": false
+        }
+      ],
+      "type": "long gun"
+    },
+    {
+      "damage_per_shot": 3375,
+      "damage_types": {
+        "basic": 3375,
+        "explosive": 337
+      },
+      "estimated": false,
+      "family": "Bombard",
+      "name": "Bombard V",
+      "notes": "Damage/range cross-verified Game8 + gamerant (Bombard II 1875/7.50s/550m on both). Tier progression I-V: 1500/1875/2250/3000/3375.",
+      "perks": [
+        "Explosive I: adds 10% of damage as Explosive damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 2925,
+      "damage_types": {
+        "basic": 2925,
+        "explosive": 585,
+        "fire": 292
+      },
+      "estimated": false,
+      "family": "Fire Bombard",
+      "name": "Fire Bombard III",
+      "notes": "Damage 1725/2325/2925 across tiers (Game8). Reload/range from bombard family.",
+      "perks": [
+        "Explosive II: adds 20% of damage as Explosive damage",
+        "Burning I: adds 10% of damage as fire/burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "repair": 2925
+      },
+      "estimated": false,
+      "family": "Repair Bombard",
+      "name": "Repair Bombard III",
+      "notes": "Repair amount 2925 at tier III from Game8 infamy table (1725/2325/2925 across tiers I-III). Repair weapons deal no damage. Reload/range from family.",
+      "perks": [
+        "Repair Bomb: projectiles repair allied ships (restores 2925 hull at tier III)"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 3075,
+      "damage_types": {
+        "basic": 3075,
+        "explosive": 307,
+        "piercing": 307
+      },
+      "estimated": false,
+      "family": "Mons Meg",
+      "name": "Mons Meg III",
+      "notes": "Damage 1875/2475/3075 across tiers (Game8). Siege bombard: dense precise projectiles, extreme piercing in small area.",
+      "perks": [
+        "Siege: dense precise projectiles; no explosive damage falloff in blast; very effective vs static targets/structures",
+        "Explosive I: adds 10% of damage as Explosive damage",
+        "Piercing I: adds 10% of damage as Piercing damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 3075,
+      "damage_types": {
+        "basic": 3075,
+        "explosive": 922
+      },
+      "estimated": false,
+      "family": "Dardanelles Gun",
+      "name": "Dardanelles Gun",
+      "notes": "Damage 3075 and range 550m from Game8 infamy table; +922 explosive = 30% explosive. Reload from family (estimated on reload only).",
+      "perks": [
+        "Adds 30% of damage as Explosive damage (+922)"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 1362,
+      "damage_types": {
+        "basic": 1362,
+        "piercing": 408
+      },
+      "estimated": false,
+      "family": "Scurlock's Chasers",
+      "name": "Scurlock's Chasers",
+      "notes": "Damage 1362 at gear score 60 (Game8). Bombard-family weapon. Range/reload inherited from family (estimated on those).",
+      "perks": [
+        "Mast Breaker: increased damage to masts/sails",
+        "Piercing III: adds 30% of damage as Piercing damage (+408)",
+        "Tearing II: increased damage to sails, builds Torn Sails status"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "Tearing II \u2014 increased sail damage",
+          "effect": "Torn Sails"
+        }
+      ],
+      "type": "bombard"
+    },
+    {
+      "damage_per_shot": 1424,
+      "damage_types": {
+        "explosive": 284
+      },
+      "estimated": false,
+      "family": "Culverin",
+      "name": "Brickbreaker III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (83 gear score, blueprint view). Damage Per Shot 1424, Total 1709. Uses Cannonballs.",
+      "perks": [
+        "The steel bores of this hardened cannon deliver explosive shells that excel at destroying structures. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin",
+      "rarity": "rare",
+      "fire_rate_s": 0.15,
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 210,
+      "projectiles": 1,
+      "gun_ports": 4
+    },
+    {
+      "damage_per_shot": 2925,
+      "damage_types": {
+        "flooding": 585,
+        "explosive": 292
+      },
+      "estimated": false,
+      "family": "Bombard",
+      "name": "Flooding Bombard III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (78 gear score, blueprint view). Damage Per Shot 2925, Total 3802. Uses Bombard Bombs.",
+      "perks": [
+        "Rains a hail of destructive shells. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        "Flooded"
+      ],
+      "type": "bombard",
+      "rarity": "rare",
+      "fire_rate_s": 0.6,
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 135,
+      "blast_radius_m": 30,
+      "projectiles": 1,
+      "gun_ports": 2
+    },
+    {
+      "damage_per_shot": 1107,
+      "damage_types": {
+        "basic": 1107,
+        "flooding": 332
+      },
+      "estimated": false,
+      "family": "Torpedo",
+      "name": "Torpedo III",
+      "notes": "Damage 653/880/1107 across tiers (Game8). Torpedo: slow-moving, must arm; range and reload unpublished (estimated:true on those).",
+      "perks": [
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Flooding III: adds 30% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "explosive": 232,
+        "flooding": 232
+      },
+      "estimated": false,
+      "family": "Shalei",
+      "name": "Shalei III",
+      "notes": "Damage 710/937/1164 across tiers (Game8). Range/reload unpublished (estimated:true on those).",
+      "perks": [
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Explosive II: adds 20% of damage as Explosive damage",
+        "Flooding II: adds 5% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via flooding damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 710,
+      "damage_types": {
+        "basic": 710,
+        "flooding": 213
+      },
+      "estimated": false,
+      "family": "Rahma's Ambition",
+      "name": "Rahma's Ambition",
+      "notes": "Damage 710 at gear score 60 (Game8). Range/reload unpublished (estimated:true on those).",
+      "perks": [
+        "Cataclysmic: (unique perk, exact effect unverified)",
+        "Flooding III: adds 30% of damage as Flooding damage",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "flooding": 349
+      },
+      "estimated": false,
+      "family": "Rahma's Legacy",
+      "name": "Rahma's Legacy",
+      "notes": "Damage 1164 at gear score 110 (Game8). Perks inferred from Rahma's Ambition (same family) \u2014 estimated:true on perks. Range/reload unpublished.",
+      "perks": [
+        "Cataclysmic: (unique perk, exact effect unverified)",
+        "Flooding III: adds 30% of damage as Flooding damage",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding III damage (charge rate unverified)",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo"
+    },
+    {
+      "damage_per_shot": 1539,
+      "damage_types": {
+        "flooding": 307
+      },
+      "estimated": false,
+      "family": "Torpedo",
+      "name": "Endless Requiem",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's max-tier card (160 gear score, full mythic tree) + ship details screen showing official perk names. Damage Per Shot 1539, Total 1846. Reload 9.4s. Uses Torpedoes. Equipped on his Galleon 'Oppressor' (LVL 7). CORRECTION 2026-11-10: Vulnerable build-up rerolled OFF by Luke \u2014 no longer on this weapon. Replacement mod unknown, do not invent.",
+      "perks": [
+        "HOMING: Projectiles home in on a hostile target.",
+        "QUICK-ARMING: Increases damage from torpedoes by 150% when target is beyond 65m.",
+        "FLOODING II: Adds 20% of damage as Flooding Damage.",
+        "SPARKS: Every hit deals an extra burst of 59 Electric Damage.",
+        "VICTOR'S RALLY: Destroying a target restores 2030 Brace Strength to this ship.",
+        "OUTBREAK: 24% chance to trigger the Poisoned status effect when hitting a weakpoint on a target. Increases the chance by 2% with consecutive weakpoint hits, to a maximum of 40%. This resets after 10 seconds of not hitting any targets."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 9.4,
+      "slot": "bow/stern",
+      "status_effects": [
+        "Flooding",
+        "Poisoned"
+      ],
+      "type": "torpedo",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 1164,
+      "damage_types": {
+        "basic": 1164,
+        "flooding": "Flooding II"
+      },
+      "estimated": true,
+      "family": "Woundcaller",
+      "name": "Woundcaller",
+      "notes": "Epic provoking torpedo added Y2S4 (Smuggler Pass). Perks from official Ubisoft Y2S4 patch notes (verified). Base damage unpublished \u2014 1164 estimated from epic torpedo class (estimated:true). Slot 'bow/stern' verified 2026-10-13: matches all 1 verified torpedo pattern(s).",
+      "perks": [
+        "Red Sunrise: hits have a 15% chance to trigger Taunted; already-Taunted targets become afflicted with Unlucky Taunt (250 damage/sec, stacks to 5). Armed bonus: 50% chance to trigger Taunt instead",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Provoking: hits cause buildup of the Taunted status effect",
+        "Flooding II: adds 20% of damage as Flooding damage"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Flooding II damage (charge rate unverified)",
+          "effect": "Flooded"
+        },
+        {
+          "application": "Provoking / Red Sunrise \u2014 15% chance per hit (50% armed)",
+          "effect": "Taunted"
+        }
+      ],
+      "type": "torpedo",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 2340,
+      "damage_types": {
+        "basic": 2340,
+        "piercing": 468
+      },
+      "estimated": false,
+      "family": "Ballista",
+      "name": "Ballista III",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (GREEN/uncommon, 145 GS). His plan 2026-10-18: the 2 Adept mods transfer onto an EPIC Ballista (vessel undecided) via Modification Transfer (source destroyed, Flux cost). Earmarked for the epic Ballista FIRST before any other use.",
+      "perks": [
+        "[Mythic] Adept Shock: +18.3% Electric Damage",
+        "Soul Mending: 6.4% of damage dealt restores Hull Health",
+        "Long Arm: hits at 70%+ max range deal 59.0% more damage",
+        "Phantom Round: 20% chance per shot to fire additional projectiles"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": 1.0,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista",
+      "verified_from_gameplay": true
+    },
+    {
+      "damage_per_shot": 2460,
+      "damage_types": {
+        "basic": 2460,
+        "piercing": 492
+      },
+      "estimated": false,
+      "family": "Great Springald",
+      "name": "Great Springald III",
+      "notes": "Damage 1500/1980/2460 across tiers, range 900m (Game8). Reload: charged-shot family; base cycle unpublished (estimated:true on reload).",
+      "perks": [
+        "Piercing: adds 20% of damage as Piercing damage (+492)",
+        "Charged shots: damage, range and projectile speed scale with charge time"
+      ],
+      "projectile_speed": null,
+      "range_m": 900,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": 4302,
+      "damage_types": {
+        "basic": 4302,
+        "piercing": 860
+      },
+      "estimated": false,
+      "family": "Twin-winch Ballista",
+      "name": "Twin-winch Ballista",
+      "notes": "Damage 4302 and range 1350m from Game8 infamy table. Rapid-fire ballista; reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Piercing: adds 20% of damage as Piercing damage (+860)",
+        "Charged shots travel further and hit harder"
+      ],
+      "projectile_speed": null,
+      "range_m": 1350,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista"
+    },
+    {
+      "damage_per_shot": 820,
+      "damage_types": {
+        "electric": 164,
+        "piercing": 164
+      },
+      "estimated": false,
+      "family": "Ballista",
+      "name": "Cloudbinder",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score, warehouse view). Damage Per Shot 820, Total 1148. Uses Ballista Bolts. Detailed stats: 2.00s reload, 600m range, 588 m/s projectile speed, 1.00s charge time.",
+      "perks": [
+        "Each bolt inscribed with stormcall glyphs and stabilized by jade capacitors, allowing the weapon to arc across multiple enemies. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 2.0,
+      "slot": "bow",
+      "status_effects": [],
+      "type": "ballista",
+      "rarity": "epic",
+      "fire_rate_s": 2.0,
+      "weakpoint_damage_pct": 225,
+      "projectile_speed_ms": 588,
+      "charge_time_s": 1.0
+    },
+    {
+      "damage_per_shot": 526,
+      "damage_types": {
+        "basic": 526,
+        "burning": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Sea Fire",
+      "name": "Sea Fire III",
+      "notes": "Damage 526 and range 125m from Game8 infamy table. Sea Fire: short-range flamethrower-style DoT weapon. Reload unpublished (estimated:true on reload). Perks unpublished.",
+      "perks": [
+        "Unverified \u2014 fire/burning DoT weapon"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "continuous fire damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": 553,
+      "damage_types": {
+        "basic": 553,
+        "fire": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Kallinikos Flame",
+      "name": "Kallinikos Flame III",
+      "notes": "Damage 337/445/553 across tiers, range 125m (Game8). Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Unverified \u2014 fire damage variant of Sea Fire"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "fire damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire"
+    },
+    {
+      "damage_per_shot": 726,
+      "damage_types": {
+        "burning": 217
+      },
+      "estimated": false,
+      "family": "Sea Fire",
+      "name": "Blue Specter",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (106 gear score, warehouse view). Damage Per Shot 726, Total 944. Uses Oil Canisters. Detailed stats: 0.30s reload, 125m range, 0.25s fire rate.",
+      "perks": [
+        "An otherworldly weapon that emits hellish blue flames which burn with increasing intensity when focused on one target. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": 0.3,
+      "slot": "bow",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "sea-fire",
+      "rarity": "epic",
+      "fire_rate_s": 0.25,
+      "weakpoint_damage_pct": 150
+    },
+    {
+      "damage_per_shot": 216,
+      "damage_types": {
+        "piercing": 43,
+        "burning": 21
+      },
+      "estimated": false,
+      "family": "Sea Fire",
+      "name": "Agni's Fury",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (98 gear score, warehouse view). Damage Per Shot 216, Total 281. Uses Oil Canisters. Detailed stats: 0.33s reload, 279m range, 0.10s fire rate.",
+      "perks": [
+        "A speedy weapon that fires flame-tipped darts, reducing your foes to ash. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 279,
+      "reload_time_s": 0.33,
+      "slot": "bow",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "sea-fire",
+      "rarity": "epic",
+      "fire_rate_s": 0.1,
+      "weakpoint_damage_pct": 225
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "Burning I",
+        "electric": "Electric III"
+      },
+      "estimated": true,
+      "family": "Heavenly Thunder",
+      "name": "Heavenly Thunder",
+      "notes": "Sea Fire added Y2S3 (Faction War rewards). Perks from official Ubisoft Y2S3 patch notes (verified). Range derived: base sea fire 125m + 75m Lancer bonus = 200m (marked estimated). Base damage unpublished. Slot 'bow' verified 2026-10-13: matches all 1 verified sea fire pattern(s).",
+      "perks": [
+        "Lancer: fires a streak of lightning that chains up to 4 targets in proximity; increases damage by 1% per 10m of weapon range; adds 75m to weapon range",
+        "Electric III: adds 30% of damage as Electric damage",
+        "Burning I: adds 10% of damage as Burning damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 200,
+      "reload_time_s": null,
+      "slot": "bow",
+      "status_effects": [
+        {
+          "application": "via electric damage (charge rate unverified)",
+          "effect": "Stormstruck"
+        },
+        {
+          "application": "via Burning I damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "sea fire",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 475,
+      "damage_types": {
+        "toxic": 142
+      },
+      "estimated": false,
+      "family": "Sea Fire",
+      "name": "Virulent Accord",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score, warehouse view). Damage Per Shot 475, Total 618. Uses Oil Canisters. Detailed stats: 0.30s reload, 125m range, 0.25s fire rate.",
+      "perks": [
+        "A deadly weapon that spreads toxic fumes to nearby enemies. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 125,
+      "reload_time_s": 0.3,
+      "slot": "bow",
+      "status_effects": [
+        "Toxic"
+      ],
+      "type": "sea-fire",
+      "rarity": "epic",
+      "fire_rate_s": 0.25,
+      "weakpoint_damage_pct": 150
+    },
+    {
+      "damage_per_shot": 11700,
+      "damage_types": {
+        "basic": 11700,
+        "explosive": "yes (exact % unverified)"
+      },
+      "estimated": false,
+      "family": "Mortar",
+      "name": "Mortar III",
+      "notes": "Damage 11700 at tier III, range 600m (Game8 infamy table). Blasting mortar: large explosive radius, slower projectiles. Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Large explosive blast radius; AoE damage reduced with distance from blast center"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {
+        "repair": 11700
+      },
+      "estimated": false,
+      "family": "Mortar",
+      "name": "Repair Mortar III",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (78 gear score, blueprint view). Repair 11700/shot. Support weapon \u2014 no damage. Uses Mortar Bombs.",
+      "perks": [
+        "Repairs damage to allied ships by launching huge adhesive shells that patch up broken hulls within a wide area."
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 20.0,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar",
+      "rarity": "rare",
+      "fire_rate_s": 20.0,
+      "projectiles": 1,
+      "gun_ports": 2,
+      "time_to_target_s": 5.75,
+      "blast_radius_m": 50
+    },
+    {
+      "damage_per_shot": 11275,
+      "damage_types": {
+        "basic": 11275
+      },
+      "estimated": false,
+      "family": "Leopold",
+      "name": "Leopold III",
+      "notes": "Damage 9075/11275 across tiers II-III, range 600m (Game8). Siege mortar: reduced blast radius, very high crushing damage, no blast falloff. Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Siege: reduced blast radius, very high crushing damage, no damage drop-off across blast radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar"
+    },
+    {
+      "damage_per_shot": 12141,
+      "damage_types": {
+        "toxic": 3642,
+        "explosive": 1821
+      },
+      "estimated": false,
+      "family": "Le Fl\u00e9au",
+      "name": "Le Fl\u00e9au",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own max-tier card (139 gear score, full perk tree incl. Mythic). Shown values include his ship/furniture bonuses: Damage Per Shot 12141 (+9466), Total Damage 17604 (+13673), Toxic 3642 (+3642), Explosive 1821 (+1821). 1000m range. Uses Mortar Bombs ammo.",
+      "perks": [
+        "Releases Toxic fumes for a short period upon impact, sapping the target's Crew Stamina based on 1% of the Toxic damage dealt.",
+        "Adds 30% of damage as Toxic Damage",
+        "Adds 15% of damage as Explosive Damage in a 50m Blast Radius",
+        "[Basic] Every hit deals an extra burst of 55 Piercing Damage.",
+        "[Advanced] Hits have a 16% chance to restore 6.9% Crew Stamina to this ship.",
+        "[Advanced] Destroying a target restores 35.0% Crew Stamina to this ship.",
+        "[Mythic] On target death, causes an explosion that deals 217% Explosive Damage to all nearby targets."
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 10.0,
+      "slot": "auxiliary",
+      "status_effects": [
+        "Toxic"
+      ],
+      "type": "mortar",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 11623,
+      "damage_types": {
+        "explosive": 1743,
+        "burning": 2324
+      },
+      "estimated": false,
+      "family": "Crouching Tiger",
+      "name": "Crouching Tiger",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own card (purple/epic). Shown values include his ship/furniture bonuses: Damage Per Shot 11623 (+8949), Total Damage 15692 (+11761), Explosive 1743 (+1743), Burning 2324 (+1256). 1000m range. Uses Mortar Bombs ammo.",
+      "perks": [
+        "Hitting a target instantly confers the Taunted status effect",
+        "Adds 15% of damage as Explosive Damage in a 50m Blast Radius",
+        "Adds 20% of damage as Burning Damage",
+        "[Basic] Every hit deals an extra burst of 46 Electric Damage."
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 10.0,
+      "slot": "auxiliary",
+      "status_effects": [
+        "Taunted"
+      ],
+      "type": "mortar",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 10660,
+      "damage_types": {
+        "explosive": 3198,
+        "piercing": 1066
+      },
+      "estimated": false,
+      "family": "Roaring Meg",
+      "name": "Roaring Meg",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's own card (160 gear score, epic). Total Damage 17163, Damage Per Shot 12259 (Explosive 3677 / Piercing 1225). 1000m range. Uses Mortar Bombs ammo. On Galleon 'Oppressor' aux (his correction 2026-10-18: 'a Meg not a maw'; single vs double unconfirmed).",
+      "perks": [
+        "Explosive Damage from this weapon deals 300% increased damage to structures",
+        "Adds 30% of damage as Explosive Damage in a 30m Blast Radius",
+        "Adds 10% of damage as Piercing Damage. Increases damage to weakpoints by 50%",
+        "[Basic] Reduces Time-to-Target by 12.7%",
+        "[Advanced] Increases Blast Radius by 18.0%",
+        "[Advanced] Hits have a 14.40% chance to reduce Restoration Kit cooldown by 3 seconds",
+        "[Mythic] On target death, causes an explosion that deals 233% Explosive Damage to all targets within 200m"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "mortar",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 12750,
+      "damage_types": {
+        "basic": 12750,
+        "burning": "yes (community-reported, unverified)"
+      },
+      "estimated": false,
+      "family": "Rocket",
+      "name": "Rocket III",
+      "notes": "Damage 12750 at tier III, range 300m (Game8). Short-range unguided rocket-propelled projectiles. Reload unpublished (estimated:true on reload). Community builds report burning damage (unverified).",
+      "perks": [
+        "Unverified \u2014 community reports burning damage on Rocket III"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": 13380,
+      "damage_types": {
+        "basic": 13380
+      },
+      "estimated": false,
+      "family": "The Termites",
+      "name": "The Termites III",
+      "notes": "Damage 10770/13380 across tiers II-III, range 400m (Game8). Reload unpublished (estimated:true on reload).",
+      "perks": [
+        "Unverified"
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket"
+    },
+    {
+      "damage_per_shot": 15666,
+      "damage_types": {
+        "explosive": 3133,
+        "burning": 1566
+      },
+      "estimated": false,
+      "family": "Rocket",
+      "name": "The Warhammer",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (98 gear score, warehouse view). Damage Per Shot 15666, Total 20366. 10 rockets per volley, 2 gun ports. Uses Rockets.",
+      "perks": [
+        "A destructive weapon that rains down large, explosive rockets from above, quite literally leveling the playing field. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 300,
+      "reload_time_s": 20.0,
+      "slot": "auxiliary",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "rocket",
+      "rarity": "epic",
+      "fire_rate_s": 0.21,
+      "weakpoint_damage_pct": 150,
+      "projectiles": 10,
+      "gun_ports": 2,
+      "magazine_size": 10,
+      "time_to_target_s": 2.25
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {
+        "repair": 9000
+      },
+      "estimated": false,
+      "family": "Rocket",
+      "name": "Celestial Bloom",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score, warehouse view). Repair 9000/shot across 30 rockets, 2 gun ports, 30 magazine. Support weapon \u2014 no damage. Uses Rockets.",
+      "perks": [
+        "Protects allies with volleys of repairing rockets. 'True strength lies not in destruction, but in the power to preserve.'"
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": 20.0,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "rocket",
+      "rarity": "epic",
+      "fire_rate_s": 0.09,
+      "projectiles": 30,
+      "gun_ports": 2,
+      "magazine_size": 30,
+      "time_to_target_s": 1.31
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {
+        "repair": 700
+      },
+      "estimated": false,
+      "family": "Springloader",
+      "name": "Little Grace",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's Little Grace II card (43 gear score, warehouse view). Repair 700/shot, 20s reload, 400m range, 2.70s time-to-target, 2 gun ports, 1 buoy. Uses Buoy Shells. Support weapon \u2014 no damage.",
+      "perks": [
+        "Deploys The Patcher buoy, which repairs damaged hulls. The prime choice for cautious captains."
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": 20.0,
+      "slot": "auxiliary",
+      "status_effects": [],
+      "type": "springloader",
+      "rarity": "rare"
+    },
+    {
+      "damage_per_shot": 2675,
+      "damage_types": {
+        "burning": 1068,
+        "electric": 187
+      },
+      "estimated": false,
+      "family": "Springloader",
+      "name": "Infernal Maw",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's max-tier card (160 gear score). Damage Per Shot 2675, Total 3930. Deploys 2 Sea Fire Mines buoys. Uses Buoy Shells. Core of his Galleon dream build.",
+      "perks": [
+        "Deploys the Sea Fire Mines buoy, which releases fiery mines filled with volatile Sea Fire liquid. A deranged pyromaniac's fantasy. (Full perk tree cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": 20.0,
+      "slot": "auxiliary",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "springloader",
+      "rarity": "epic",
+      "fire_rate_s": 20.0,
+      "weakpoint_damage_pct": 125,
+      "projectiles": 1,
+      "gun_ports": 2,
+      "buoys": 2,
+      "time_to_target_s": 2.7,
+      "player_rolls": [
+        {
+          "gear_score": 106,
+          "total_damage": 3225,
+          "damage_per_shot": 2481,
+          "reload_time_s": 100,
+          "damage_types": {
+            "burning": 744
+          },
+          "perks": [
+            "Deployed buoy erupts into a fiery explosion when destroyed, dealing 300% damage and instantly causing targets to be set Ablaze",
+            "Adds 30% of damage as Burning Damage",
+            "[Basic] Every hit deals an extra burst of 58 Flooding Damage.",
+            "[Advanced] Increases build-up of the Vulnerable status effect by 33%"
+          ],
+          "notes": "Screenshot-verified 2026-10-19 from Luke's card. Aux on his Junk 'Relentless'. Sea Fire Mines buoys: 3225 total, 65m range, 25s. NOT the god-rolled dream Maw (this one is 2-ascension)."
+        }
+      ]
+    },
+    {
+      "damage_per_shot": 1496,
+      "damage_types": {
+        "electric": 344
+      },
+      "estimated": false,
+      "family": "Heaven's Mandate",
+      "name": "Heaven's Mandate",
+      "notes": "DISPUTE RESOLVED 2026-10-18: Luke sent three real cards (91/135/119 GS) \u2014 it IS his, and it is a CULVERIN (filed type 'carronade' was wrong, corrected). 500m range, Cannonballs.",
+      "perks": [
+        "If a target is afflicted with the Stormstruck status effect, hits have a 15% chance to summon a devastating Lightning strike that deals 1500 Electric Damage",
+        "Adds 20% of damage as Electric Damage",
+        "Roll A (135 GS, ascended 3/4): [Basic] -10.1% reload; [Advanced] +36% weakpoint damage; [Advanced] destroying a weakpoint restores 222 Severe Damage. Total 2064, per-shot 1720.",
+        "Roll B (119 GS): [Basic] +11.8% explosive damage; [Advanced] +35% damage when hitting sails; [Advanced] +31.9% existing electric damage. Total 2377, per-shot 1720.",
+        "Roll C (91 GS, unascended): Total 1795, per-shot 1496."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": null,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Stormstruck"
+      ],
+      "type": "culverin",
+      "rarity": "epic",
+      "verified_from_gameplay": true
+    },
+    {
+      "damage_per_shot": 0,
+      "damage_types": {
+        "repair": 1435
+      },
+      "estimated": false,
+      "family": "Culverin",
+      "name": "White Jade",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (98 gear score, warehouse view). Repair 1435/shot, 4 gun ports. Support weapon \u2014 no damage. Uses Cannonballs.",
+      "perks": [
+        "Designed with the ability to repair multiple ships at once, this treasured cannon is coveted by admirals and merchants alike."
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [],
+      "type": "culverin",
+      "rarity": "epic",
+      "fire_rate_s": 0.15,
+      "projectile_speed_ms": 210,
+      "gun_ports": 4
+    },
+    {
+      "damage_per_shot": 1307,
+      "damage_types": {
+        "piercing": 392
+      },
+      "estimated": false,
+      "family": "Hullcarver",
+      "name": "Hullcarver",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score). Damage Per Shot 1307 (-211), Total Damage 1699 (-303), Piercing 392 (+212). 500m range. Uses Cannonballs ammo.",
+      "perks": [
+        "After landing 6 consecutive hits, increase this weapon's damage by 12% for 25s. If the target is Punctured, hits increase weapon damage up to 18% instead. Missing a hit removes this effect.",
+        "Adds 30% of damage as Piercing Damage.",
+        "Increases damage to weakpoints by 100%."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Punctured"
+      ],
+      "type": "culverin",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 10660,
+      "damage_types": {
+        "flooding": 3198,
+        "explosive": 1599
+      },
+      "estimated": false,
+      "family": "De Breker",
+      "name": "De Breker",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's own card (160 gear score, epic). Total Damage 19100, Damage Per Shot 12259 (Flooding 3677 / Explosive 1838 / Toxic 1323). 1000m range. Uses Mortar Bombs ammo. On the Brigantine 'IN TOO DEEP' aux slot.",
+      "perks": [
+        "Hits from this weapon reduce the target's sailing speed by an additional 12% when they are Flooded. Hits on stationary targets or targets affected by Flooded or Torn Sails status deal 60% more damage.",
+        "Adds 30% of damage as Flooding Damage",
+        "Adds 15% of damage as Explosive Damage in a 50m Blast Radius",
+        "[Basic] Adds 10.8% damage as Toxic Damage",
+        "[Advanced] Hits have a 16% chance to restore 375 Brace Strength to this ship",
+        "[Advanced] Increases damage to structures by 36%",
+        "[Mythic] On target death, causes an explosion (card text cut off in screenshot \u2014 % not visible)"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        "Flooded",
+        "Torn Sails"
+      ],
+      "type": "mortar",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "piercing": "20%",
+        "explosive": "10% in 30m radius"
+      },
+      "estimated": true,
+      "family": "L'Aiguille",
+      "name": "L'Aiguille",
+      "notes": "Epic Piercing Springloader added Y3S1 'Shattered Seas' (launched 12 May 2026) (Faction War). All numeric stats unpublished (estimated:true). Perk text quoted from official Y3S1 patch notes. Slot 'auxiliary' verified 2026-10-13: matches all 1 verified springloader pattern(s).",
+      "perks": [
+        "Splinter: targets within the area of operation of this weapon have a 30% chance to be instantly Punctured; Punctured targets within the area of operation lose 2% Armor Rating per second up to 14%",
+        "Piercing II: adds 20% of damage as Piercing Damage; increases damage to weakpoints by 75%",
+        "Explosive I: adds 10% of damage as Explosive Damage in a 30m Blast Radius"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "auxiliary",
+      "status_effects": [
+        {
+          "application": "Splinter \u2014 30% chance instantly on targets in the area of operation; Punctured targets lose 2% Armor Rating per second up to 14%",
+          "effect": "Punctured"
+        }
+      ],
+      "type": "springloader",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 2050,
+      "damage_types": {
+        "toxic": 410,
+        "piercing": 205
+      },
+      "estimated": false,
+      "family": "Blightbearer",
+      "name": "Blightbearer",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score, warehouse view). Damage Per Shot 2050, Total 2665, Toxic 410, Piercing 205. Uses Cannonballs. Detailed stats: 7.20s reload, 1000m range, 350 m/s projectile speed.",
+      "perks": [
+        "A precise Poison weapon, prized by La Peste's lackeys for its strength against fortified ships. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "slot": "bow/stern",
+      "status_effects": [
+        "Poisoned"
+      ],
+      "type": "long gun",
+      "fire_rate_s": 0.6,
+      "rarity": "epic",
+      "weakpoint_damage_pct": 200,
+      "projectile_speed_ms": 350,
+      "gun_ports": 2
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%",
+        "explosive": "10% in 30m radius"
+      },
+      "estimated": true,
+      "family": "Soulsnatcher",
+      "name": "Soulsnatcher",
+      "notes": "Epic Lifesteal Bombard added Y3S1 'Shattered Seas' (launched 12 May 2026) (Honorless time-limited event reward). Base damage unpublished (estimated:true). Reload/range from bombard family. Perk text quoted from official Y3S1 patch notes. Slot 'bow/stern' verified 2026-10-13: matches all 1 verified bombard pattern(s).",
+      "perks": [
+        "Haunting Mending: 20% of damage dealt restores Hull Health, increasing by 20% for every additional target within impact area up to a maximum of 60%",
+        "Burning II: adds 20% of damage as Burning Damage",
+        "Explosive I: adds 10% of damage as Explosive Damage in a 30m Blast Radius"
+      ],
+      "projectile_speed": null,
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified)",
+          "effect": "Ablaze"
+        }
+      ],
+      "type": "bombard",
+      "slot_verified": true
+    },
+    {
+      "damage_per_shot": 1509,
+      "damage_types": {
+        "burning": 301
+      },
+      "estimated": false,
+      "family": "Atma's Toll",
+      "name": "Atma's Toll",
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (160 GS, ascended 3/4). Total 1811, per-shot 1509. Sustain demi-cannon (heal on damage). Evaluated for Garuda loop 2026-10-18: sustain alternate broadside; Faule Ilse 135 stays the loop engine (weakpoint).",
+      "perks": [
+        "Heals for 10% of damage dealt. Hitting 16 projectiles in one salvo increases mending amount to 35% for 16s",
+        "Adds 20% of damage as Burning Damage",
+        "[Basic] Every hit deals an extra burst of 60 Explosive Damage",
+        "[Advanced] Destroying a target restores 2010 Brace Strength to this ship",
+        "[Advanced] Hits have a 3.57% chance to reduce any repair kit cooldown by 3 seconds",
+        "[Mythic] 12% of Toxic Damage reduces Brace Strength for 10s. Cannot be stacked or reset on subsequent hits."
+      ],
+      "projectile_speed": null,
+      "range_m": 400,
+      "reload_time_s": 3.5,
+      "slot": "broadside",
+      "status_effects": [
+        "Burning"
+      ],
+      "type": "demi-cannon",
+      "rarity": "epic",
+      "fire_rate_s": 3.5,
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 400,
+      "projectiles": 4,
+      "gun_ports": 4,
+      "verified_from_gameplay": true
+    },
+    {
+      "damage_per_shot": 1394,
+      "damage_types": {
+        "burning": 278,
+        "explosive": 139
+      },
+      "estimated": false,
+      "family": "Scorch Song",
+      "name": "Scorch Song",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own card (purple/epic). Shown values include his ship/furniture bonuses: Damage Per Shot 1394 (-124), Total Damage 1812 (-190), Burning 278 (-25), Explosive 139 (+139). Uses Cannonballs ammo.",
+      "perks": [
+        "Trigger an explosion when the target is either Ablaze or Shell-shocked. Ignition's explosion deals 1000 Explosive Damage and an additional 20% weapon damage as Explosive Damage per hit. Consecutive shots increase this bonus up to 500%. This effect cannot trigger again for 30s.",
+        "Adds 20% of damage as Burning Damage",
+        "Adds 10% of damage as Explosive Damage"
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 6.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        "Burning",
+        "Ablaze"
+      ],
+      "type": "culverin",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": 1431,
+      "damage_types": {
+        "flooding": 391
+      },
+      "estimated": false,
+      "family": "Drowning Hellion",
+      "name": "Drowning Hellion",
+      "notes": "Screenshot-verified 2026-10-10 from Luke's card (139 gear score). Total Damage 1960, Damage Per Shot 1431. Uses Cannonballs.",
+      "perks": [
+        "Sea's Fury: each volley has a 15% chance to deal 100% Flooding Damage as Severe Damage. Every 5 hits increases this chance by 15%, up to 75%. If the target is Flooded, deal 200% Flooding Damage as Severe Damage instead.",
+        "Adds 30% of damage as Flooding Damage",
+        "[Basic] Every hit deals an extra burst of 53 Toxic Damage."
+      ],
+      "projectile_speed": null,
+      "range_m": 500,
+      "reload_time_s": 10.0,
+      "slot": "bow/broadside/stern",
+      "status_effects": [
+        {
+          "effect": "Flooded",
+          "application": "via 30% Flooding damage"
+        }
+      ],
+      "type": "demi-cannon",
+      "rarity": "epic"
+    },
+    {
+      "damage_per_shot": null,
+      "damage_types": {
+        "basic": "unverified",
+        "burning": "20%",
+        "flooding": "10% + Burning Thirst (1000 flat)"
+      },
+      "estimated": true,
+      "family": "Drakon's Jaws",
+      "name": "Drakon's Jaws",
+      "notes": "Epic Burning Flooding Torpedo added Y3S2 'Crimson Waters' (launched 18 Aug 2026) (Darktide Lullaby event reward). Base damage unpublished (estimated:true). Range/reload unpublished like all torpedoes. Perk text quoted from official Y3S2 patch notes. Slot 'bow/stern' verified 2026-10-13: matches all 1 verified torpedo pattern(s).",
+      "perks": [
+        "Burning Thirst: trigger an explosion when the target is either Ablaze or Flooded; Burning Thirst's explosion deals 1000 Flooding damage and an additional 20% weapon damage as Flooding damage per hit; consecutive hits increase this bonus up to 500%; this effect cannot trigger again for 30 seconds",
+        "Burning II: adds 20% Damage as Burning Damage",
+        "Flooding I: adds 10% Damage as Flooding Damage",
+        "Arming: increases damage from torpedoes by 150% when target is beyond 85m"
+      ],
+      "projectile_speed": null,
+      "range_m": null,
+      "reload_time_s": null,
+      "slot": "bow/stern",
+      "status_effects": [
+        {
+          "application": "via Burning II damage (charge rate unverified); Burning Thirst triggers on Ablaze targets",
+          "effect": "Ablaze"
+        },
+        {
+          "application": "via Flooding I damage (charge rate unverified); Burning Thirst triggers on Flooded targets",
+          "effect": "Flooded"
+        }
+      ],
+      "type": "torpedo",
+      "slot_verified": true
+    },
+    {
+      "name": "Heavenly Lance",
+      "family": "Torpedo",
+      "type": "torpedo",
+      "slot": "bow/stern",
+      "rarity": "rare",
+      "range_m": null,
+      "reload_time_s": null,
+      "damage_per_shot": null,
+      "damage_types": {
+        "electric": null
+      },
+      "status_effects": [
+        "Flooded"
+      ],
+      "perks": [
+        "Electric III: adds 30% of damage as Electric Damage",
+        "Arming: increases torpedo damage by 150% when target is beyond 85m",
+        "Flooding II: adds 5% of damage as Flooding Damage"
+      ],
+      "estimated": true,
+      "notes": "Added 2026-10-21 at Luke's 'put the new gun information in' \u2014 the only electric torpedo in the game, per Y1S3 'Scorched Horizons' contract reward (official patch notes via mp1st, as reported 2026-10-20). Damage/range/reload NOT invented \u2014 left null until a card is filed. Torpedo pattern (Arming/Flooding) follows Torpedo III in this file."
+    },
+    {
+      "damage_per_shot": 3280,
+      "damage_types": {
+        "toxic": 984
+      },
+      "estimated": false,
+      "family": "Bombard",
+      "name": "Anathema",
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (91 gear score, warehouse view). Damage Per Shot 3280, Total 4264. Uses Bombard Bombs. 35m blast radius.",
+      "perks": [
+        "A vile weapon that spreads La Peste's toxins. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "projectile_speed": null,
+      "range_m": 600,
+      "reload_time_s": 7.5,
+      "slot": "bow/stern",
+      "status_effects": [
+        "Toxic"
+      ],
+      "type": "bombard",
+      "rarity": "epic",
+      "fire_rate_s": 0.6,
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 135,
+      "blast_radius_m": 35
+    },
+    {
+      "name": "Lange Kartouwe",
+      "slot": "bow",
+      "type": "long gun",
+      "family": "Lange Kartouwe",
+      "damage_per_shot": 2555,
+      "damage_types": {
+        "explosive": 510,
+        "piercing": 255
+      },
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "projectile_speed": 350,
+      "perks": [
+        "Hits have a 15% chance to inflict a delayed explosion dealing 7500 damage in a 65m radius after 4s. Chance becomes 100% on weakpoint hits. One delayed attack per target.",
+        "Increases damage to structures by 50%",
+        "Adds 20% of damage as Explosive Damage",
+        "Adds 10% of damage as Piercing Damage. Increases damage to weakpoints by 50%",
+        "[Basic] Increases damage by 10.8%",
+        "[Advanced] Increases damage to structures by 36%",
+        "[Advanced] Hits have a 16% chance to restore 6.7% Crew Stamina to this ship",
+        "[Mythic] 17% of Toxic Damage reduces Brace Strength for 10s. Cannot stack or reset on subsequent hits."
+      ],
+      "status_effects": [],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's card (160 GS, ascended 3/4, Long Gun). Total 3321, per-shot 2555. BOW PICK for the Frigate taunt build 2026-10-18: guaranteed 7500 delayed explosion on weakpoint hits feeds Shot Carving Station's Taunting Charge.",
+      "verified_from_gameplay": true
+    },
+    {
+      "name": "Hongyipao",
+      "family": "Bombard",
+      "type": "bombard",
+      "slot": "bow/stern",
+      "rarity": "rare",
+      "range_m": 500,
+      "reload_time_s": 9.9,
+      "damage_per_shot": 3724,
+      "damage_types": {
+        "explosive": 948
+      },
+      "status_effects": [
+        "Taunted"
+      ],
+      "perks": [
+        "Hits on a target cause build up of the Taunted status effect",
+        "Adds 20% of damage as Explosive Damage in a 35m Blast Radius",
+        "[Basic] Increases damage by 11.1%",
+        "[Advanced] Increases existing Explosive Damage by 27.3%"
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own card (blue/rare). Shown values include his ship/furniture bonuses: Damage Per Shot 3724 (+2205 bonus), Total Damage 4672 (+2669 bonus), Explosive 948 (+948). Base (unmodified) damage not isolated \u2014 treat damage_per_shot as his-build value. Reload 9.9s read from card (99 displayed, interpreted as 9.9s). Uses Bombard Bombs ammo."
+    },
+    {
+      "name": "Hellepoort",
+      "family": "Culverin",
+      "type": "culverin",
+      "slot": "bow/broadside/stern",
+      "rarity": "epic",
+      "range_m": 500,
+      "reload_time_s": 10.0,
+      "damage_per_shot": 1581,
+      "damage_types": {
+        "burning": 316
+      },
+      "status_effects": [
+        "Burning"
+      ],
+      "perks": [
+        "10% of damage dealt from this weapon restores Hull Health",
+        "Adds 20% of damage as Burning Damage",
+        "[Basic] Every hit deals an extra burst of 57 Piercing Damage"
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own card (purple/epic). Shown values include his ship/furniture bonuses: Damage Per Shot 1581 (+63), Total Damage 1898 (-105), Burning 316 (+13). Reload 10.0s read from card (100 displayed, interpreted as 10.0s). Uses Cannonballs ammo.",
+      "player_rolls": [
+        {
+          "gear_score": 114,
+          "total_damage": 2248,
+          "damage_per_shot": 1732,
+          "reload_time_s": 100,
+          "damage_types": {
+            "burning": 346,
+            "piercing": 169
+          },
+          "perks": [
+            "10% of damage dealt from this weapon restores Hull Health",
+            "Adds 20% of damage as Burning Damage",
+            "[Basic] Adds 9.8% damage as Piercing Damage",
+            "[Advanced] 5.9% of damage dealt by this weapon restores Hull Health.",
+            "[Advanced] Hits have a 16% chance to restore 5.6% Crew Stamina to this ship."
+          ],
+          "notes": "Screenshot-verified 2026-10-19 from Luke's card. Stern on his Junk 'Relentless'."
+        }
+      ]
+    },
+    {
+      "name": "Naga's Call",
+      "family": "Culverin",
+      "type": "culverin",
+      "slot": "bow/broadside/stern",
+      "rarity": "epic",
+      "range_m": 500,
+      "reload_time_s": 10.0,
+      "damage_per_shot": 1464,
+      "damage_types": {
+        "explosive": 146
+      },
+      "status_effects": [],
+      "perks": [
+        "Increases damage by 5% after each hit. Resets after 7s from the first hit.",
+        "Adds 10% of damage as Explosive Damage in a 30m Blast Radius",
+        "[Basic] Every hit deals an extra burst of 52 Burning Damage."
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own card (purple/epic). Shown values include his ship/furniture bonuses: Damage Per Shot 1464 (-55), Total Damage 1610 (-392), Explosive 146 (+146). Reload 10.0s read from card (100 displayed, interpreted as 10.0s). Uses Cannonballs ammo."
+    },
+    {
+      "name": "Nashkar",
+      "family": "Long Gun",
+      "type": "long-gun",
+      "slot": "bow/broadside/stern",
+      "rarity": "epic",
+      "range_m": 500,
+      "reload_time_s": 4.2,
+      "damage_per_shot": 2739,
+      "damage_types": {
+        "burning": 547,
+        "piercing": 364
+      },
+      "status_effects": [
+        "Burning"
+      ],
+      "perks": [
+        "5% of damage dealt from this weapon restores Hull Health. When a weakpoint is hit, the repair amount is multiplied by 700%.",
+        "Adds 20% of damage as Burning Damage",
+        "Adds 10% of damage as Piercing Damage. Increases damage to weakpoints by 50%.",
+        "[Basic] Hits ignore 13.2% of the target's Burning resistance.",
+        "[Advanced] Increases Weakpoint Damage by 37%.",
+        "[Advanced] Increases existing Piercing Damage by 33.1%.",
+        "[Mythic] Every hit deals 39% as Burning Damage over 10s."
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's own max-tier card (160 gear score, full mythic tree). Damage Per Shot 2739, Total Damage 3652. Reload 4.2s read from card (42 displayed, interpreted as 4.2s). Uses Cannonballs ammo.",
+      "player_rolls": [
+        {
+          "gear_score": 160,
+          "total_damage": 3652,
+          "damage_per_shot": 2739,
+          "reload_time_s": 42,
+          "damage_types": {
+            "burning": 547,
+            "piercing": 364
+          },
+          "perks": [
+            "5% of damage dealt from this weapon restores Hull Health. When a weakpoint is hit, the repair amount is multiplied by 700%.",
+            "Adds 20% of damage as Burning Damage",
+            "Adds 10% of damage as Piercing Damage; Increases damage to weakpoints by 50%",
+            "[Basic] Hits ignore 13.2% of the target's Burning resistance.",
+            "[Advanced] Increases Weakpoint Damage by 37%",
+            "[Advanced] Increases existing Piercing Damage by 33.1%",
+            "[Mythic] Every hit deals 39% as Burning Damage over 10s"
+          ],
+          "notes": "Screenshot-verified 2026-10-19 from Luke's card. Bow on his Junk 'Relentless'."
+        }
+      ]
+    },
+    {
+      "name": "The Drowned One",
+      "family": "Long Gun",
+      "type": "long-gun",
+      "slot": "bow/broadside/stern",
+      "rarity": "epic",
+      "range_m": 500,
+      "reload_time_s": 8.6,
+      "damage_per_shot": 2593,
+      "damage_types": {
+        "flooding": 518,
+        "piercing": 518,
+        "toxic": 698
+      },
+      "status_effects": [
+        "Flooded",
+        "Vulnerable"
+      ],
+      "perks": [
+        "Hitting a weakpoint deals 150% of Flooding Damage as an extra burst of Severe Damage. If a target is Flooded, the extra burst damage is increased to 200%.",
+        "Adds 20% of damage as Flooding Damage",
+        "Adds 20% of damage as Piercing Damage",
+        "Increases damage to weakpoints by 75%",
+        "[Basic] Adds 18.2% damage as Toxic Damage",
+        "[Advanced] Increases existing Toxic Damage by 47.9%",
+        "[Advanced] Increases damage by 36% when hitting sails",
+        "[Mythic] Every hit deals 38% as Burning Damage over 10s"
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's own card: 182 GS (upgraded from 173), total 4329 / per-shot 2593. Bow long gun on 'In Too Deep' Brigantine (LOCKED build). MOD HISTORY 2026-10-18: [Basic] +18.2% toxic is a TRANSFERRED Adept mod from a blue long gun (source destroyed); [Advanced] +47.9% existing toxic was RE-ROLLED the same night. Mythic is BURNING (38% as Burning over 10s). CLARIFICATION 2026-10-21 (his correction): the 47.9% Advanced toxic mod was re-rolled FLAT \u2014 do not quote it as multiplied/stacked.",
+      "gear_score": 182,
+      "total_damage": 4329,
+      "verified_from_gameplay": true
+    },
+    {
+      "name": "Bombard III",
+      "family": "Bombard",
+      "type": "bombard",
+      "slot": "bow/stern",
+      "rarity": "common",
+      "range_m": 550,
+      "reload_time_s": 7.5,
+      "fire_rate_s": 0.6,
+      "damage_per_shot": 2250,
+      "damage_types": {
+        "explosive": 225
+      },
+      "status_effects": [],
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 135,
+      "blast_radius_m": 30,
+      "projectiles": 1,
+      "gun_ports": 2,
+      "perks": [
+        "Rains a hail of destructive shells. (Perk text cut off in screenshot \u2014 base stats verified.)"
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (28 gear score, blueprint view). Damage Per Shot 2250, Total 2475. Uses Bombard Bombs."
+    },
+    {
+      "name": "Long Gun III",
+      "family": "Long Gun",
+      "type": "long-gun",
+      "slot": "bow/broadside/stern",
+      "rarity": "common",
+      "range_m": 1000,
+      "reload_time_s": 7.2,
+      "fire_rate_s": 0.6,
+      "damage_per_shot": 1750,
+      "damage_types": {
+        "piercing": 175
+      },
+      "status_effects": [],
+      "weakpoint_damage_pct": 200,
+      "projectile_speed_ms": 350,
+      "projectiles": 1,
+      "gun_ports": 2,
+      "perks": [
+        "Long-barrel cannons adept at destroying targets at long range."
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (28 gear score, blueprint view). Damage Per Shot 1750, Total 1925. Uses Cannonballs."
+    },
+    {
+      "name": "Culverin III",
+      "family": "Culverin",
+      "type": "culverin",
+      "slot": "bow/broadside/stern",
+      "rarity": "common",
+      "range_m": 600,
+      "reload_time_s": 6.0,
+      "fire_rate_s": 0.2,
+      "damage_per_shot": 750,
+      "damage_types": {},
+      "status_effects": [],
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 210,
+      "projectiles": 1,
+      "gun_ports": 4,
+      "perks": [
+        "A versatile cannon that offers good range, damage, and Reload Time."
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (28 gear score, blueprint view). Damage Per Shot 750. Uses Cannonballs."
+    },
+    {
+      "name": "Demi-cannon III",
+      "family": "Demi-cannon",
+      "type": "demi-cannon",
+      "slot": "bow/broadside/stern",
+      "rarity": "common",
+      "range_m": 250,
+      "reload_time_s": 3.5,
+      "fire_rate_s": 3.5,
+      "damage_per_shot": 912,
+      "damage_types": {},
+      "status_effects": [],
+      "weakpoint_damage_pct": 150,
+      "projectile_speed_ms": 400,
+      "projectiles": 4,
+      "gun_ports": 4,
+      "perks": [
+        "A medium-sized cannon that rips targets apart at close range by firing deadly shrapnel."
+      ],
+      "estimated": false,
+      "notes": "Screenshot-verified 2026-10-09 from Luke's card (28 gear score, blueprint view). Damage Per Shot 912. Uses Cannonballs."
+    },
+    {
+      "name": "Carronade",
+      "family": "Carronade",
+      "type": "culverin",
+      "slot": "bow/broadside/stern",
+      "rarity": "epic",
+      "range_m": 500,
+      "reload_time_s": null,
+      "damage_per_shot": 1737,
+      "damage_types": {
+        "flooding": 173,
+        "explosive": 191
+      },
+      "estimated": false,
+      "notes": "Luke runs THREE Carronades on the Brigantine 'IN TOO DEEP' (2026-10-18 cards). Uses Cannonballs. Its own gun, not Heaven's Mandate. Card header labels it 'Culverin | Cannonballs'.",
+      "perks": [
+        "Adds 50% of damage as Severe Damage when target is Flooded",
+        "Adds 10% of damage as Flooding Damage",
+        "[Basic] Adds 11.0% damage as Explosive Damage",
+        "[Advanced] Hits have a 8.9% chance to increase turn speed by 10% for 15 seconds. Effect can be stacked up to 3 times.",
+        "[Advanced] Hits have a 12% chance of dealing additional 109% damage as Severe Damage"
+      ],
+      "player_rolls": [
+        {
+          "gear_score": 191,
+          "total_damage": 2237,
+          "damage_per_shot": 1737,
+          "perks": [
+            "Adds 50% of damage as Severe Damage when target is Flooded",
+            "Adds 10% of damage as Flooding Damage",
+            "[Basic] Adds 18.8% damage as Toxic Damage",
+            "[Advanced] Increases existing Burning Damage by 46.0%",
+            "[Advanced] 15.7% of base damage builds up the Taunted status effect on targets",
+            "[Mythic] Targets that have the Flooded status effect will take an additional 9% of Severe Damage"
+          ],
+          "notes": "Upgraded 173 -> 191 GS on 2026-10-19 (his card); two Advanced mods swapped in (burning 46%, taunt 15.7%) via mod transfer."
+        },
+        {
+          "gear_score": 160,
+          "total_damage": 2101,
+          "damage_per_shot": 1737,
+          "perks": [
+            "Adds 50% of damage as Severe Damage when target is Flooded",
+            "Adds 10% of damage as Flooding Damage",
+            "[Basic] Adds 11.0% damage as Explosive Damage",
+            "[Advanced] Hits have a 8.9% chance to increase turn speed by 10% for 15 seconds. Effect can be stacked up to 3 times",
+            "[Advanced] Hits have a 12% chance of dealing additional 109% damage as Severe Damage",
+            "[Mythic] On target death, causes an explosion that deals 111% Explosive Damage and applies the Shell-shocked status effect to all targets within 300m"
+          ]
+        },
+        {
+          "gear_score": 160,
+          "total_damage": 1967,
+          "damage_per_shot": 1737,
+          "perks": [
+            "Adds 50% of damage as Severe Damage when target is Flooded",
+            "Adds 10% of damage as Flooding Damage",
+            "[Basic] Every hit deals an extra burst of 56 Explosive Damage",
+            "[Advanced] Hits have a 16% chance to restore 380 Brace Strength to this ship",
+            "[Advanced] Increases existing Flooding Damage by 32.9%",
+            "[Mythic] On target death, causes an explosion that deals 222% Explosive Damage to all targets within 200m"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Urban's Great Gun",
+      "type": "culverin",
+      "family": "Urban's Great Gun",
+      "slot": "bow/broadside/stern",
+      "perks": [
+        "Allows all weapons in the same quadrant to fire simultaneously",
+        "Increases damage by 75% when hitting sails",
+        "Roll A (135 GS, ascended 3/4): [Basic] every hit deals +56 explosive burst; [Advanced] +36% damage to structures; [Advanced] +37% damage when hitting sails. Total 2122, per-shot 2122.",
+        "Roll B (127 GS): [Basic] +56 explosive burst; [Advanced] 5.4% of damage restores hull; [Advanced] +37% damage to structures. Currently equipped on 'Artificer'. Total 2122, per-shot 2122.",
+        "Roll A2 (135 GS, on Garuda screen 2026-10-18): [Basic] every hit deals +56 FLOODING burst (vs explosive on warehouse roll); [Advanced] +36% structures; [Advanced] +37% hitting sails. Same quadrant-fire + 75% sails base.",
+        "Roll B full mod names (127 GS, on 'Artificer' 2026-10-18): COMBUST (+56 explosive/hit), SOUL MENDING (5.4% damage restores hull), SIEGE (+37% structures). Deck Position: All Deck. 600m range, 4.0s reload, 150% weakpoint damage."
+      ],
+      "notes": "Screenshot-verified 2026-10-18 from Luke's two cards (135 + 127 GS). Culverin, 500m, Cannonballs. Quadrant-simultaneous-fire is the standout perk. The 127 is TAKEN (equipped on his ship 'Artificer'); the 135 is the free roll.",
+      "estimated": false,
+      "verified_from_gameplay": true
+    },
+    {
+      "name": "Hellfire",
+      "family": "Rocket",
+      "type": "rocket",
+      "slot": "auxiliary",
+      "gear_score": 91,
+      "damage_per_shot": 20595,
+      "total_damage": 26773,
+      "burning_damage": 6178,
+      "projectiles_fired": 15,
+      "reload_time_s": 20.0,
+      "range_m": 300,
+      "fire_rate_s": 0.21,
+      "weakpoint_damage_pct": 150,
+      "time_to_target_s": 1.31,
+      "magazine_size": 15,
+      "perks": [
+        "BURNING ARTILLERY: Fires a volley of 15 heavy rockets instead of many smaller rockets. Each hit reduces the target's Fire Mitigation by 1.5%, up to 22.5%, if the target is Ablaze, lasting for the duration of the status.",
+        "BURNING III: Adds 30% of damage as Burning Damage"
+      ],
+      "base_ship_rank_required": 4,
+      "ship_size": "All Sizes",
+      "description": "A heavy rocket weapon that burns away its target's Fire Mitigation with consecutive hits.",
+      "estimated": false,
+      "verified_from_gameplay": true,
+      "notes": "Screenshot-verified 2026-10-18 from Luke's own cards (91 GS, stats + perks). Fire-mitigation shredder: -1.5%/hit up to -22.5% while target Ablaze. Garuda loop verdict 2026-10-18: support/enabler piece, NOT a Maw replacement \u2014 91 GS, 20s reload, single aux slot stays with the Infernal Maw. Merged 2026-10-21: an earlier Y3S2 patch-note entry for the same weapon listed -1%/hit up to -20% fire-mitigation (vs the 91 GS card's -1.5%/hit up to -22.5%); card numbers kept as primary, patch-note variant kept here for reference. Duplicate entry removed."
+    }
+  ]
+}
