@@ -32,6 +32,16 @@ jobs:
         working-directory: app/src/main/assets/www
         run: bash fetch_ocr_assets.sh
 
+      # aapt strips .gz from assets and stores the decompressed file, but
+      # Tesseract.js fetches eng.traineddata.gz by name. Double-gzip it so
+      # aapt's single gunzip pass leaves exactly eng.traineddata.gz behind.
+      - name: Double-gzip traineddata for aapt
+        working-directory: app/src/main/assets/www/js/ocr
+        run: |
+          gzip -c eng.traineddata.gz > eng.traineddata.gz.gz
+          rm eng.traineddata.gz
+          ls -lh
+
       - name: Build debug APK
         run: gradle :app:assembleDebug --stacktrace
 
