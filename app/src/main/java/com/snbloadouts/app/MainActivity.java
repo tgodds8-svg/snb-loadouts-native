@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
                         CAMERA_PERMISSION_REQUEST_CODE
                     );
                 } else {
-                    launchCameraAndPickerChooser();
+                    launchCameraAndPickerChooser(true);
                 }
                 return true;
             }
@@ -90,9 +90,16 @@ public class MainActivity extends Activity {
         webView.loadUrl("https://appassets.androidplatform.net/assets/www/index.html");
     }
 
-    private void launchCameraAndPickerChooser() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+    private void launchCameraAndPickerChooser(boolean includeCamera) {
+        cameraPhotoUri = null;
+        Intent takePictureIntent = null;
+        if (includeCamera) {
+            takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) == null) {
+                takePictureIntent = null;
+            }
+        }
+        if (takePictureIntent != null) {
             File photoFile = null;
             try {
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
@@ -108,6 +115,8 @@ public class MainActivity extends Activity {
                     photoFile
                 );
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, cameraPhotoUri);
+            } else {
+                takePictureIntent = null;
             }
         }
 
@@ -115,7 +124,7 @@ public class MainActivity extends Activity {
         contentSelectionIntent.addCategory(Intent.CATEGORY_OPENABLE);
         contentSelectionIntent.setType("image/*");
 
-        Intent[] intentArray = (cameraPhotoUri != null)
+        Intent[] intentArray = (takePictureIntent != null)
             ? new Intent[]{takePictureIntent}
             : new Intent[0];
 
@@ -131,7 +140,11 @@ public class MainActivity extends Activity {
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAMERA_PERMISSION_REQUEST_CODE) {
-            launchCameraAndPickerChooser();
+            boolean granted = grantResults.length > 0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            // Camera denied: still open the chooser, gallery-only, instead of
+            // forcing a camera intent the user just refused.
+            launchCameraAndPickerChooser(granted);
         }
     }
 
