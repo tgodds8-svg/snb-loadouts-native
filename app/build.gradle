@@ -36,3 +36,13 @@ dependencies {
     implementation 'androidx.core:core:1.13.1'
     implementation 'androidx.webkit:webkit:1.11.0'
 }
+
+// Transitive Kotlin stdlib conflict: appcompat/webkit pull kotlin-stdlib 1.8.22
+// while an older transitive pulls kotlin-stdlib-jdk8 1.6.21, whose classes were
+// merged into kotlin-stdlib in 1.8. Force both to 1.8.22 to clear the duplicate.
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+    }
+}
